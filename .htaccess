@@ -1,0 +1,22 @@
+RewriteEngine On
+# Set index.html as the default page (IMPORTANT!)
+DirectoryIndex index.html
+# Redirect the temporary OVH domain to your real domain
+RewriteCond %{HTTP_HOST} ^advensv\.cluster030\.hosting\.ovh\.net [NC]
+RewriteRule ^(.*)$ https://www.advensys-trading.lv/$1 [L,R=301]
+# Force www version  
+RewriteCond %{HTTP_HOST} ^advensys-trading\.lv [NC]
+RewriteRule ^(.*)$ https://www.advensys-trading.lv/$1 [L,R=301]
+# Remove .html extension from URLs (optional)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+# Custom error pages (optional)
+ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html
+# Security headers
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-Frame-Options SAMEORIGIN
+    Header always set X-XSS-Protection "1; mode=block"
+</IfModule>

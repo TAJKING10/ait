@@ -37,16 +37,8 @@
     progressPath.style.strokeDashoffset = progress;
   };
   updateProgress();
-  $(window).scroll(updateProgress);
   var offset = 50;
   var duration = 550;
-  jQuery(window).on('scroll', function() {
-    if (jQuery(this).scrollTop() > offset) {
-      jQuery('.progress-wrap').addClass('active-progress');
-    } else {
-      jQuery('.progress-wrap').removeClass('active-progress');
-    }
-  });
   jQuery('.progress-wrap').on('click', function(event) {
     event.preventDefault();
     jQuery('html, body').animate({scrollTop: 0}, duration);
@@ -311,13 +303,6 @@ const counterUp = window.counterUp.default;
     });
   }
 
-  // performance Count
-  const performanceCount = document.querySelectorAll('.counter');
-  if (performanceCount.length > 0) {
-    performanceCount.forEach((counterNumber) => {
-      IO.observe(counterNumber);
-    });
-  }
 // ========================= Counter Up Js End ===================
 
 // ========================= AOS Js Start ===================
@@ -349,9 +334,23 @@ const counterUp = window.counterUp.default;
       });
   }
 
-  // Trigger animation on scroll and page load
-  $(window).on('scroll', animateProgress);
   animateProgress(); // Run on page load
+
+  // Single rAF-throttled scroll handler replacing four separate listeners
+  var _scrollTicking = false;
+  window.addEventListener('scroll', function () {
+    if (!_scrollTicking) {
+      requestAnimationFrame(function () {
+        var scrollY = window.pageYOffset;
+        updateProgress();
+        animateProgress();
+        jQuery('.progress-wrap').toggleClass('active-progress', scrollY > offset);
+        jQuery('.header').toggleClass('fixed-header', scrollY >= 100);
+        _scrollTicking = false;
+      });
+      _scrollTicking = true;
+    }
+  }, { passive: true });
 // ========================= Animated Radial Progress Js End ===================
 
 // ========================= ShowCase Slider Js start ===================
@@ -901,15 +900,5 @@ var planExecuteSlider = new Swiper('.testimonials-three-slider', {
     })
     // ========================= Preloader Js End=====================
 
-    // ========================= Header Sticky Js Start ==============
-    $(window).on('scroll', function() {
-      if ($(window).scrollTop() >= 100) {
-        $('.header').addClass('fixed-header');
-      }
-      else {
-          $('.header').removeClass('fixed-header');
-      }
-    }); 
-    // ========================= Header Sticky Js End===================
 
 })(jQuery);

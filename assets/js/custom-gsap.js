@@ -22,26 +22,20 @@ var dot = document.querySelector('.dot');
 var cursorSmalls = document.querySelectorAll('.cursor-small');
 var cursorBigs = document.querySelectorAll('.cursor-big');
 
-body.addEventListener('mousemove', function (event) {
-    gsap.to(cursor, {
-        x: event.x,
-        y: event.y,
-        duration: 2, 
-        delay: 0.1,
-        visibility: 'visible',
-        ease: "expo.out",
-    });
-});
+// quickTo avoids spawning a new tween on every mousemove event
+const cursorXTo = gsap.quickTo(cursor, "x", { duration: 0.6, ease: "expo.out" });
+const cursorYTo = gsap.quickTo(cursor, "y", { duration: 0.6, ease: "expo.out" });
+const dotXTo   = gsap.quickTo(dot,    "x", { duration: 0.4, ease: "expo.out" });
+const dotYTo   = gsap.quickTo(dot,    "y", { duration: 0.4, ease: "expo.out" });
+
+gsap.set([cursor, dot], { visibility: 'visible' });
 
 body.addEventListener('mousemove', function (event) {
-    gsap.to(dot, {
-        x: event.x,
-        y: event.y,
-        duration: 1.5,
-        visibility: 'visible',
-        ease: "expo.out",
-    });
-});
+    cursorXTo(event.x);
+    cursorYTo(event.y);
+    dotXTo(event.x);
+    dotYTo(event.y);
+}, { passive: true });
 
 // Small Cursor
 cursorSmalls.forEach(cursorSmall => {
@@ -357,7 +351,7 @@ if ($('.drag-rotate-element').length) {
       }
   });
 
-  gsap.to(".drag-rotate-element", {
+  const floatTween = gsap.to(".drag-rotate-element", {
       y: "+=0",
       rotate: '3deg',
       repeat: -1,
@@ -365,6 +359,16 @@ if ($('.drag-rotate-element').length) {
       ease: "sine.inOut",
       duration: 2.5,
       stagger: 0.3,
+      paused: true,
+  });
+  ScrollTrigger.create({
+      trigger: ".drag-rotate-element-section",
+      start: "top bottom",
+      end: "bottom top",
+      onEnter: () => floatTween.play(),
+      onLeave: () => floatTween.pause(),
+      onEnterBack: () => floatTween.play(),
+      onLeaveBack: () => floatTween.pause(),
   });
 }
 // **************************** Drag Rotate Element js End ****************************

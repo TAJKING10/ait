@@ -14,20 +14,56 @@ var smoother = ScrollSmoother.create({
   ease: "power4.out",
 });
 
-// Intercept anchor clicks so they scroll quickly instead of lagging
-document.addEventListener('click', function (e) {
-  var anchor = e.target.closest('a[href^="#"]');
-  if (!anchor) return;
-  var id = anchor.getAttribute('href');
-  if (!id || id === '#') return;
-  var target = document.querySelector(id);
-  if (!target) return;
-  e.preventDefault();
-  gsap.to(smoother, {
-    scrollTop: smoother.offset(target, 'top 90px'),
-    duration: 0.55,
-    ease: 'power2.inOut'
+// On load: if URL is page.html/section, scroll to that section
+(function () {
+  var m = window.location.pathname.match(/\.html\/([^/?#]+)/);
+  if (!m) return;
+  var sectionId = m[1];
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      var target = document.getElementById(sectionId);
+      if (!target) return;
+      var sm = ScrollSmoother.get();
+      if (sm) {
+        gsap.to(sm, { scrollTop: sm.offset(target, 'top 90px'), duration: 0.55, ease: 'power2.inOut' });
+      } else {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 400);
   });
+})();
+
+// Intercept anchor clicks — handle #section and page.html/section on the same page
+document.addEventListener('click', function (e) {
+  var anchor = e.target.closest('a[href]');
+  if (!anchor) return;
+  var href = anchor.getAttribute('href');
+  if (!href) return;
+
+  var sectionId = null;
+
+  if (href.charAt(0) === '#') {
+    if (href.length > 1) sectionId = href.slice(1);
+  } else {
+    var pathMatch = href.match(/([^/]+\.html)\/([^/?#]+)/);
+    if (pathMatch) {
+      // Only intercept if the link targets the current page
+      var currentFile = window.location.pathname.split('/').filter(function (p) { return p.endsWith('.html'); })[0] || '';
+      if (!currentFile) currentFile = window.location.pathname.replace(/.*\/([^/]*)$/, '$1').replace(/\/.*$/, '');
+      if (pathMatch[1] !== currentFile) return;
+      sectionId = pathMatch[2];
+    }
+  }
+
+  if (!sectionId) return;
+  var target = document.getElementById(sectionId);
+  if (!target) return;
+
+  e.preventDefault();
+  var base = window.location.pathname.replace(/\.html.*$/, '.html');
+  history.pushState({ section: sectionId }, '', base + '/' + sectionId);
+
+  gsap.to(smoother, { scrollTop: smoother.offset(target, 'top 90px'), duration: 0.55, ease: 'power2.inOut' });
 });
 // =================================== Smooth Scroller End Start =====================================
 

@@ -97,28 +97,28 @@
 
     /* ── Aviation Cards ── */
     .aviation-card {
-      background: white; border-radius: 20px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+      background: white; border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
       overflow: hidden; transition: all 0.3s ease; height: 100%;
     }
-    .aviation-card:hover { transform: translateY(-8px); box-shadow: 0 25px 60px rgba(0,0,0,0.15); }
+    .aviation-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(0,0,0,0.13); }
     .aviation-card-header {
-      padding: 2.5rem 2rem 1.5rem;
+      padding: 1.25rem 1.5rem 1rem;
       background: linear-gradient(135deg, var(--main-600, #1f2b69), var(--main-two-600, #20ba8b));
       color: white;
     }
     .aviation-card-header .icon {
-      font-size: 3rem; margin-bottom: 1rem; display: block;
+      font-size: 2rem; margin-bottom: 0.4rem; display: block;
     }
-    .aviation-card-body { padding: 1.5rem 2rem 2rem; }
+    .aviation-card-body { padding: 1rem 1.5rem 1.25rem; }
     .aviation-card-body ul { list-style: none; padding: 0; margin: 0; }
     .aviation-card-body ul li {
-      padding: 0.45rem 0; border-bottom: 1px solid #f0f0f0;
-      color: #555; font-size: 0.95rem;
+      padding: 0.3rem 0; border-bottom: 1px solid #f0f0f0;
+      color: #555; font-size: 0.9rem;
     }
     .aviation-card-body ul li:last-child { border-bottom: none; }
     .aviation-card-body ul li::before {
-      content: "✓"; color: #20ba8b; font-weight: bold; margin-right: 0.5rem;
+      content: "✓"; color: #20ba8b; font-weight: bold; margin-right: 0.4rem;
     }
 
     /* ── Aircraft Type Badges ── */
@@ -135,13 +135,13 @@
 
     /* ── Process Steps ── */
     .process-step {
-      text-align: center; padding: 1.5rem;
+      text-align: center; padding: 0.75rem 0.5rem;
     }
     .process-step .step-number {
-      width: 60px; height: 60px; background: var(--main-600, #1f2b69);
+      width: 46px; height: 46px; background: var(--main-600, #1f2b69);
       color: white; border-radius: 50%; display: flex; align-items: center;
-      justify-content: center; font-size: 1.3rem; font-weight: 700;
-      margin: 0 auto 1rem;
+      justify-content: center; font-size: 1.1rem; font-weight: 700;
+      margin: 0 auto 0.6rem;
     }
     .process-connector {
       display: flex; align-items: center; justify-content: center;
@@ -151,7 +151,7 @@
     /* ── CTA Banner ── */
     .aviation-cta {
       background: linear-gradient(135deg, var(--main-600, #1f2b69) 0%, var(--main-two-600, #20ba8b) 100%);
-      border-radius: 20px; padding: 3rem; color: white; text-align: center;
+      border-radius: 16px; padding: 2rem; color: white; text-align: center;
     }
 
     /* ── Section Divider ── */
@@ -162,9 +162,9 @@
     }
 
     @media (max-width: 768px) {
-      .aviation-card-header { padding: 2rem 1.5rem 1rem; }
-      .aviation-card-body { padding: 1rem 1.5rem 1.5rem; }
-      .aviation-cta { padding: 2rem 1rem; }
+      .aviation-card-header { padding: 1rem 1.25rem 0.75rem; }
+      .aviation-card-body { padding: 0.75rem 1.25rem 1rem; }
+      .aviation-cta { padding: 1.5rem 1rem; }
     }
   </style>
 </head>
@@ -335,17 +335,17 @@
       <!-- ══════════════════════════════════════════════
            SECTION 1 – AVIATION SPARE PARTS  (NEW)
            ══════════════════════════════════════════════ -->
-      <section id="aviation" class="py-120 overflow-hidden">
+      <section id="aviation" class="py-5 overflow-hidden">
         <div class="container">
-          <div class="text-center tw-mb-15" data-aos="fade-up" data-aos-duration="600">
+          <div class="text-center mb-4" data-aos="fade-up" data-aos-duration="600">
             <span class="tw-py-1 tw-px-705 bg-main-600 text-white tw-text-sm fw-bold text-capitalize rounded-pill tw-mb-205">
               NEW SERVICE
             </span>
-            <h2 class="splitTextStyleOne fw-bold tw-leading-104 tw-mt-4 tw-mb-6">
+            <h2 class="splitTextStyleOne fw-bold tw-leading-104 mt-2 mb-2">
               Aviation Division
             </h2>
             <div class="section-divider"></div>
-            <p class="text-neutral-500 max-w-600-px mx-auto mt-3">
+            <p class="text-neutral-500 max-w-600-px mx-auto mt-2 mb-0">
               Advensys International Trading SIA now bridges the global aviation supply chain —
               sourcing certified aircraft spare parts and facilitating the sale of pre-owned
               helicopters and private jets with full documentation and compliance support.
@@ -365,7 +365,7 @@
                   </p>
                 </div>
                 <div class="aviation-card-body">
-                  <p class="text-neutral-600 tw-mb-4 fw-medium">Components &amp; categories we handle:</p>
+                  <p class="text-neutral-600 mb-2 fw-medium">Components &amp; categories we handle:</p>
                   <ul>
                     <li>Aircraft engines &amp; APU units (serviceable / overhauled)</li>
                     <li>Avionics systems – FMS, transponders, radios, displays</li>
@@ -376,7 +376,7 @@
                     <li>Rotary-wing components (rotor blades, gearboxes)</li>
                     <li>Consumables &amp; expendables (filters, seals, O-rings)</li>
                   </ul>
-                  <div class="mt-4 p-3 rounded-3" style="background: #f8f9fa;">
+                  <div class="mt-2 p-2 rounded-3" style="background: #f8f9fa;">
                     <p class="text-neutral-600 mb-1 fw-semibold small">Aircraft Types Supported:</p>
                     <div>
                       <span class="aircraft-badge" style="font-size:0.78rem;">Boeing 737 / 777 / 787</span>
@@ -403,7 +403,7 @@
                   </p>
                 </div>
                 <div class="aviation-card-body">
-                  <p class="text-neutral-600 tw-mb-4 fw-medium">Documentation &amp; certifications provided:</p>
+                  <p class="text-neutral-600 mb-2 fw-medium">Documentation &amp; certifications provided:</p>
                   <ul>
                     <li>EASA Form 1 / FAA 8130-3 release certificates</li>
                     <li>Serviceable tags with full traceability records</li>
@@ -414,7 +414,7 @@
                     <li>Vendor approvals from certified MRO facilities</li>
                     <li>Export documentation &amp; customs clearance support</li>
                   </ul>
-                  <div class="mt-4 p-3 rounded-3" style="background: #f0faf6; border-left: 4px solid #20ba8b;">
+                  <div class="mt-2 p-2 rounded-3" style="background: #f0faf6; border-left: 4px solid #20ba8b;">
                     <p class="mb-0 text-neutral-600 small">
                       <strong>AOG Support:</strong> We understand the critical nature of Aircraft-on-Ground situations.
                       Our network allows priority sourcing with rapid worldwide logistics to minimise downtime.
@@ -430,17 +430,17 @@
       <!-- ══════════════════════════════════════════════
            SECTION 2 – PRE-OWNED AIRCRAFT  (NEW)
            ══════════════════════════════════════════════ -->
-      <section id="secondhand" class="py-120 bg-neutral-50 overflow-hidden">
+      <section id="secondhand" class="py-5 bg-neutral-50 overflow-hidden">
         <div class="container">
-          <div class="text-center tw-mb-15" data-aos="fade-up" data-aos-duration="600">
+          <div class="text-center mb-4" data-aos="fade-up" data-aos-duration="600">
             <span class="tw-py-1 tw-px-705 bg-main-two-600 text-white tw-text-sm fw-bold text-capitalize rounded-pill tw-mb-205">
               Pre-Owned Aircraft
             </span>
-            <h2 class="splitTextStyleOne fw-bold tw-leading-104 tw-mt-4 tw-mb-6">
+            <h2 class="splitTextStyleOne fw-bold tw-leading-104 mt-2 mb-2">
               Second-Hand Helicopters &amp; Private Jets
             </h2>
             <div class="section-divider"></div>
-            <p class="text-neutral-500 max-w-620-px mx-auto mt-3">
+            <p class="text-neutral-500 max-w-620-px mx-auto mt-2 mb-0">
               We connect qualified buyers with verified sellers of pre-owned rotary-wing and
               fixed-wing aircraft — providing a discreet, professional brokerage service backed
               by thorough due diligence and legal compliance.
@@ -448,7 +448,7 @@
           </div>
 
           <!-- Aircraft type cards -->
-          <div class="row gy-4 tw-mb-15">
+          <div class="row gy-4 mb-4">
             <!-- Helicopters -->
             <div class="col-lg-6" data-aos="fade-up" data-aos-duration="600">
               <div class="aviation-card h-100">
@@ -461,7 +461,7 @@
                   </p>
                 </div>
                 <div class="aviation-card-body">
-                  <p class="text-neutral-600 fw-medium tw-mb-4">Helicopter categories available:</p>
+                  <p class="text-neutral-600 fw-medium mb-2">Helicopter categories available:</p>
                   <ul>
                     <li>Light turbine – Robinson R66, Airbus H120/H125</li>
                     <li>Medium twin – Airbus H135, H145, Bell 429</li>
@@ -471,7 +471,7 @@
                     <li>Medevac / EMS equipped helicopters</li>
                     <li>Offshore oil &amp; gas support helicopters</li>
                   </ul>
-                  <div class="mt-3 p-3 rounded-3" style="background: #f0f4ff;">
+                  <div class="mt-2 p-2 rounded-3" style="background: #f0f4ff;">
                     <p class="mb-0 text-neutral-600 small">
                       <strong>Typical buyers:</strong> Private individuals, charter operators, air ambulance
                       services, oil &amp; gas companies, government &amp; military clients.
@@ -493,7 +493,7 @@
                   </p>
                 </div>
                 <div class="aviation-card-body">
-                  <p class="text-neutral-600 fw-medium tw-mb-4">Private jet categories available:</p>
+                  <p class="text-neutral-600 fw-medium mb-2">Private jet categories available:</p>
                   <ul>
                     <li>Very Light Jets (VLJ) – Embraer Phenom 100, Eclipse 550</li>
                     <li>Light jets – Cessna Citation, Pilatus PC-24</li>
@@ -503,7 +503,7 @@
                     <li>Ultra-long-range – Gulfstream G650ER, Global 7500</li>
                     <li>VIP-configured airliners (ACJ / BBJ)</li>
                   </ul>
-                  <div class="mt-3 p-3 rounded-3" style="background: #fdf0f8;">
+                  <div class="mt-2 p-2 rounded-3" style="background: #fdf0f8;">
                     <p class="mb-0 text-neutral-600 small">
                       <strong>Typical buyers:</strong> HNWIs, family offices, corporate flight departments,
                       charter operators, fractional ownership programs.
@@ -515,12 +515,12 @@
           </div>
 
           <!-- Transaction Process -->
-          <div class="bg-white tw-rounded-50-px common-shadow-five tw-p-9 tw-mt-10" data-aos="fade-up" data-aos-duration="800">
-            <div class="text-center mb-5">
+          <div class="bg-white rounded-4 common-shadow-five p-4" data-aos="fade-up" data-aos-duration="800">
+            <div class="text-center mb-3">
               <span class="tw-py-1 tw-px-705 bg-main-50 text-main-600 tw-text-sm fw-bold text-capitalize rounded-pill">
                 Our Transaction Process
               </span>
-              <h4 class="mt-3">How We Facilitate Your Aircraft Transaction</h4>
+              <h5 class="mt-2 mb-0">How We Facilitate Your Aircraft Transaction</h5>
             </div>
             <div class="row gy-4 text-center">
               <div class="col-lg col-md-4 col-6" data-aos="fade-up" data-aos-duration="400">
@@ -566,7 +566,7 @@
       <!-- ══════════════════════════════════════════════
            AVIATION CTA
            ══════════════════════════════════════════════ -->
-      <section class="py-120 overflow-hidden">
+      <section class="py-4 overflow-hidden">
         <div class="container">
           <div class="aviation-cta" data-aos="fade-up" data-aos-duration="800">
             <h3 class="text-white fw-bold mb-3">Looking to Buy or Sell an Aircraft?</h3>

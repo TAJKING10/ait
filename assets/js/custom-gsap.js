@@ -7,11 +7,27 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 // gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 // =================================== Smooth Scroller Js Start =====================================
-ScrollSmoother.create({
-  smooth: .8, // how long (in seconds) it takes to "catch up" to the native scroll position
-  effects: true, // looks for data-speed and data-lag attributes on elements
-  smoothTouch: 0.1, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
+var smoother = ScrollSmoother.create({
+  smooth: .8,
+  effects: true,
+  smoothTouch: 0.1,
   ease: "power4.out",
+});
+
+// Intercept anchor clicks so they scroll quickly instead of lagging
+document.addEventListener('click', function (e) {
+  var anchor = e.target.closest('a[href^="#"]');
+  if (!anchor) return;
+  var id = anchor.getAttribute('href');
+  if (!id || id === '#') return;
+  var target = document.querySelector(id);
+  if (!target) return;
+  e.preventDefault();
+  gsap.to(smoother, {
+    scrollTop: smoother.offset(target, 'top 90px'),
+    duration: 0.55,
+    ease: 'power2.inOut'
+  });
 });
 // =================================== Smooth Scroller End Start =====================================
 

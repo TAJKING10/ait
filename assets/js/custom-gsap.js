@@ -151,20 +151,20 @@ mmm.add("(max-width: 991px)", () => {
 
         gsap.set(el, { perspective: 100 });
 
-        gsap.set(split.lines, { 
-            yPercent: 140, 
-            opacity: 0 
+        gsap.set(split.lines, {
+            yPercent: 60,
+            opacity: 0
         });
 
         gsap.to(split.lines, {
-          duration: 1.2, // Smooth transition duration
+          duration: 0.5,
           yPercent: 0,
           opacity: 1,
-          ease: "power4.out",
-          stagger: 0.2,
+          ease: "power3.out",
+          stagger: 0.07,
             scrollTrigger: {
               trigger: el,
-              start: "top 85%",
+              start: "top 90%",
               invalidateOnRefresh: true
             },
         });

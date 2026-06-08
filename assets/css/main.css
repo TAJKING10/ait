@@ -9148,7 +9148,8 @@ h6 {
 /* ── Aviation image card (replaces stock photo) ── */
 .aviation-img-card {
   background: linear-gradient(135deg, #0A2040 0%, #1A3D7A 55%, #0D2B5E 100%);
-  min-height: 240px;
+  height: 300px;
+  min-height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -726,86 +726,141 @@
               </div>
 
               <div class="col-lg-6 ps-lg-5">
-                <div class="bg-neutral-50 tw-py-17 tw-px-705">
-                  <h4 class="tw-mb-4">Fill Up The Form</h4>
-                  <p class="text-neutral-600 max-w-444-px">
-                    Your email address will not be published. Required fields
-                    are marked *
-                  </p>
-                 <div id="alertContainer"></div>
-                
-                <form id="contactForm" class="tw-mt-70-px d-flex flex-column tw-gap-12 form-submit">
-                    <div class="position-relative">
-                        <input
-                            type="text"
-                            name="user_name"
-                            id="userName"
-                            class="focus-outline-0 bg-transparent border-0 tw-pb-5 tw-ps-9 w-100 border-bottom border-neutral-200 focus-border-main-600"
-                            placeholder="Your Name*"
-                            required
-                        />
-                        <span class="tw-text-xl d-flex text-neutral-500 position-absolute top-0 tw-start-0">
-                            <i class="ph-bold ph-user"></i>
-                        </span>
+                <div class="contact-form-card">
+
+                  <!-- Card Header -->
+                  <div class="contact-form-header">
+                    <div class="d-flex align-items-center gap-3 mb-2">
+                      <div class="form-header-icon">
+                        <i class="ph ph-paper-plane-tilt"></i>
+                      </div>
+                      <div>
+                        <h4 class="text-white fw-bold mb-0">Send Us a Message</h4>
+                        <p class="text-white mb-0" style="opacity:0.7;font-size:0.85rem;">We'll respond within 24 hours</p>
+                      </div>
                     </div>
-                    
-                    <div class="position-relative">
-                        <input
-                            type="email"
-                            name="user_email"
-                            id="userEmail"
-                            class="focus-outline-0 bg-transparent border-0 tw-pb-5 tw-ps-9 w-100 border-bottom border-neutral-200 focus-border-main-600"
-                            placeholder="Email Address*"
-                            required
-                        />
-                        <span class="tw-text-xl d-flex text-neutral-500 position-absolute top-0 tw-start-0">
-                            <i class="ph-bold ph-envelope"></i>
-                        </span>
+                    <div class="form-header-dots">
+                      <span></span><span></span><span></span>
                     </div>
-                    
-                    <div class="position-relative">
-                        <input
-                            type="text"
-                            name="user_company"
-                            id="userCompany"
-                            class="focus-outline-0 bg-transparent border-0 tw-pb-5 tw-ps-9 w-100 border-bottom border-neutral-200 focus-border-main-600"
-                            placeholder="Company*"
-                            required
-                        />
-                        <span class="tw-text-xl d-flex text-neutral-500 position-absolute top-0 tw-start-0">
-                            <i class="ph-bold ph-buildings"></i>
-                        </span>
-                    </div>
-                    
-                    <div class="position-relative">
-                        <textarea
-                            name="message"
-                            id="userMessage"
-                            class="focus-outline-0 bg-transparent border-0 tw-pb-5 tw-ps-9 w-100 border-bottom border-neutral-200 focus-border-main-600 tw-h-108-px"
-                            placeholder="Enter Your Message here*"
-                            required
-                        ></textarea>
-                        <span class="tw-text-xl d-flex text-neutral-500 position-absolute top-0 tw-start-0">
-                            <i class="ph-bold ph-note-pencil"></i>
-                        </span>
-                    </div>
-                    
-                    <div class="">
-                        <button
-                            type="submit"
-                            id="submitBtn"
-                            class="btn btn-main hover--translate-y-1 active--translate-y-scale-9 hover-style-one button--stroke d-inline-flex align-items-center justify-content-center tw-gap-5 group active--translate-y-2 rounded-0"
-                        >
-                            <span class="button__flair"></span>
-                            <span class="text-white tw-text-2xl group-hover-text-white tw-duration-500 position-relative" id="buttonIcon">
-                                <i class="ph-bold ph-paper-plane-tilt"></i>
-                            </span>
-                            <span class="button__label" id="buttonText">Get In Touch</span>
-                        </button>
-                    </div>
-                </form>
+                  </div>
+
+                  <!-- Card Body -->
+                  <div class="contact-form-body">
+                    <div id="alertContainer"></div>
+
+                    <form id="contactForm" class="d-flex flex-column gap-3 form-submit">
+
+                      <div class="cf-field">
+                        <label class="cf-label"><i class="ph ph-user"></i> Full Name</label>
+                        <input type="text" name="user_name" id="userName" class="cf-input" placeholder="Your full name" required />
+                      </div>
+
+                      <div class="cf-field">
+                        <label class="cf-label"><i class="ph ph-envelope"></i> Email Address</label>
+                        <input type="email" name="user_email" id="userEmail" class="cf-input" placeholder="your@email.com" required />
+                      </div>
+
+                      <div class="cf-field">
+                        <label class="cf-label"><i class="ph ph-buildings"></i> Company</label>
+                        <input type="text" name="user_company" id="userCompany" class="cf-input" placeholder="Your company name" required />
+                      </div>
+
+                      <div class="cf-field">
+                        <label class="cf-label"><i class="ph ph-chat-text"></i> Message</label>
+                        <textarea name="message" id="userMessage" class="cf-input cf-textarea" placeholder="Tell us about your requirements…" required></textarea>
+                      </div>
+
+                      <button type="submit" id="submitBtn" class="cf-submit">
+                        <span id="buttonIcon"><i class="ph-bold ph-paper-plane-tilt"></i></span>
+                        <span id="buttonText">Send Message</span>
+                      </button>
+
+                    </form>
+                  </div>
+
                 </div>
               </div>
+
+              <style>
+                .contact-form-card {
+                  border-radius: 20px;
+                  overflow: hidden;
+                  box-shadow: 0 20px 60px rgba(10,32,64,0.18);
+                  border: 1px solid rgba(201,168,76,0.2);
+                }
+                .contact-form-header {
+                  background: linear-gradient(135deg, #0A2040, #1A3D7A);
+                  padding: 1.6rem 2rem;
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                }
+                .form-header-icon {
+                  width: 48px; height: 48px;
+                  background: rgba(201,168,76,0.2);
+                  border: 2px solid #C9A84C;
+                  border-radius: 12px;
+                  display: flex; align-items: center; justify-content: center;
+                  font-size: 1.4rem; color: #C9A84C; flex-shrink: 0;
+                }
+                .form-header-dots { display: flex; gap: 6px; }
+                .form-header-dots span {
+                  width: 10px; height: 10px; border-radius: 50%;
+                  background: rgba(255,255,255,0.2);
+                }
+                .form-header-dots span:first-child { background: #C9A84C; }
+                .contact-form-body {
+                  background: #ffffff;
+                  padding: 2rem;
+                }
+                .cf-field { display: flex; flex-direction: column; gap: 0.35rem; }
+                .cf-label {
+                  font-size: 0.8rem; font-weight: 600;
+                  color: #1A3D7A; letter-spacing: 0.03em;
+                  display: flex; align-items: center; gap: 0.4rem;
+                }
+                .cf-label i { font-size: 0.95rem; color: #C9A84C; }
+                .cf-input {
+                  width: 100%;
+                  padding: 0.7rem 1rem;
+                  border: 1.5px solid #e2e8f0;
+                  border-radius: 10px;
+                  font-size: 0.9rem;
+                  color: #1a1a2e;
+                  background: #f8faff;
+                  transition: border-color 0.2s, box-shadow 0.2s;
+                  outline: none;
+                  font-family: inherit;
+                }
+                .cf-input:focus {
+                  border-color: #C9A84C;
+                  box-shadow: 0 0 0 3px rgba(201,168,76,0.12);
+                  background: #fff;
+                }
+                .cf-input::placeholder { color: #aab4c4; }
+                .cf-textarea { resize: vertical; min-height: 110px; }
+                .cf-submit {
+                  width: 100%;
+                  padding: 0.9rem 1.5rem;
+                  background: linear-gradient(135deg, #C9A84C, #A8871E);
+                  color: white;
+                  font-size: 1rem;
+                  font-weight: 700;
+                  border: none;
+                  border-radius: 10px;
+                  cursor: pointer;
+                  display: flex; align-items: center; justify-content: center; gap: 0.6rem;
+                  transition: all 0.25s ease;
+                  letter-spacing: 0.03em;
+                  margin-top: 0.25rem;
+                }
+                .cf-submit:hover {
+                  background: linear-gradient(135deg, #A8871E, #8a6d15);
+                  transform: translateY(-2px);
+                  box-shadow: 0 8px 20px rgba(201,168,76,0.35);
+                }
+                .cf-submit:active { transform: translateY(0); }
+              </style>
             </div>
           </div>
         </section>

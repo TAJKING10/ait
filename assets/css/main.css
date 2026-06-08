@@ -9178,3 +9178,60 @@ h6 {
   margin: 0;
   position: relative;
 }
+
+/* ── Unified footer typography (applied to every page) ── */
+.footer { font-size: 0.9rem; }
+
+/* Column headings */
+.footer h5,
+.footer h6,
+.footer .footer-section h6 {
+  color: #ffffff !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 1rem !important;
+  letter-spacing: 0.02em;
+}
+
+/* All link/text items in footer lists */
+.footer-links a,
+.footer-links li a,
+.footer-links p {
+  color: rgba(255, 255, 255, 0.92) !important;
+  font-size: 0.9rem !important;
+  font-weight: 400 !important;
+  text-decoration: none !important;
+  line-height: 1.5 !important;
+  display: block;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover,
+.footer-links li a:hover {
+  color: #C9A84C !important;
+}
+
+/* Footer bottom copyright & legal */
+.copyright-text,
+.copyright-text small {
+  color: rgba(255, 255, 255, 0.75) !important;
+  font-size: 0.82rem !important;
+}
+.legal-links a {
+  color: rgba(255, 255, 255, 0.75) !important;
+  font-size: 0.82rem !important;
+}
+.legal-links a:hover { color: #ffffff !important; }
+
+/* Footer company description paragraph */
+.footer-description,
+.footer .footer-company-info > p {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-size: 0.88rem !important;
+}
+
+/* Contact items in footer */
+.footer .contact-item span {
+  color: rgba(255, 255, 255, 0.92) !important;
+  font-size: 0.9rem !important;
+}

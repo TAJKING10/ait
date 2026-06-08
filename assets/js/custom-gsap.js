@@ -14,11 +14,12 @@ var smoother = ScrollSmoother.create({
   ease: "power4.out",
 });
 
-// On load: if URL is page.html/section, scroll to that section
+// On load: if URL is /services/aviation, scroll to that section
 (function () {
-  var m = window.location.pathname.match(/\.html\/([^/?#]+)/);
-  if (!m) return;
-  var sectionId = m[1];
+  var parts = window.location.pathname.split('/').filter(Boolean);
+  // Last segment is a section if there are 2+ parts and it has no dot
+  if (parts.length < 2 || parts[parts.length - 1].indexOf('.') !== -1) return;
+  var sectionId = parts[parts.length - 1];
   window.addEventListener('load', function () {
     setTimeout(function () {
       var target = document.getElementById(sectionId);
@@ -33,7 +34,7 @@ var smoother = ScrollSmoother.create({
   });
 })();
 
-// Intercept anchor clicks — handle #section and page.html/section on the same page
+// Intercept anchor clicks — handle #section and page/section on the same page
 document.addEventListener('click', function (e) {
   var anchor = e.target.closest('a[href]');
   if (!anchor) return;
@@ -45,12 +46,14 @@ document.addEventListener('click', function (e) {
   if (href.charAt(0) === '#') {
     if (href.length > 1) sectionId = href.slice(1);
   } else {
-    var pathMatch = href.match(/([^/]+\.html)\/([^/?#]+)/);
+    // Match page/section (e.g. services/aviation)
+    var pathMatch = href.match(/^([^/?#.]+)\/([^/?#]+)$/);
     if (pathMatch) {
-      // Only intercept if the link targets the current page
-      var currentFile = window.location.pathname.split('/').filter(function (p) { return p.endsWith('.html'); })[0] || '';
-      if (!currentFile) currentFile = window.location.pathname.replace(/.*\/([^/]*)$/, '$1').replace(/\/.*$/, '');
-      if (pathMatch[1] !== currentFile) return;
+      var linkPage = pathMatch[1];
+      // Get current page name (strip .html and any trailing section)
+      var currentParts = window.location.pathname.split('/').filter(Boolean);
+      var currentPage = (currentParts[0] || '').replace('.html', '');
+      if (linkPage !== currentPage) return; // different page — let browser navigate
       sectionId = pathMatch[2];
     }
   }
@@ -60,8 +63,9 @@ document.addEventListener('click', function (e) {
   if (!target) return;
 
   e.preventDefault();
-  var base = window.location.pathname.replace(/\.html.*$/, '.html');
-  history.pushState({ section: sectionId }, '', base + '/' + sectionId);
+  var currentParts = window.location.pathname.split('/').filter(Boolean);
+  var currentPage = (currentParts[0] || '').replace('.html', '');
+  history.pushState({ section: sectionId }, '', '/' + currentPage + '/' + sectionId);
 
   gsap.to(smoother, { scrollTop: smoother.offset(target, 'top 90px'), duration: 0.55, ease: 'power2.inOut' });
 });

@@ -7,9 +7,9 @@ RewriteRule ^(.*)$ https://www.advensys-trading.lv/$1 [L,R=301]
 # Force www version  
 RewriteCond %{HTTP_HOST} ^advensys-trading\.lv [NC]
 RewriteRule ^(.*)$ https://www.advensys-trading.lv/$1 [L,R=301]
-# Handle section paths like services.html/aviation
+# Handle clean section paths like services/aviation
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^/]+\.html)/([^/]+)/?$ $1 [NC,L]
+RewriteRule ^([^/\.]+)/([^/]+)/?$ $1.html [NC,L]
 # Remove .html extension from URLs (optional)
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f

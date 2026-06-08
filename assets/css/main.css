@@ -129,17 +129,17 @@
     --heading-five: clamp(1.125rem, 1.2rem + 0.722vw, 1.5rem);
     --heading-six: clamp(1rem, 0.769rem + 0.6813vw, 1.25rem);
   /* Font Size End */
-  /* template main color */
-    --main-h: 221;
-    --main-s: 84%;
-    --main-l: 46%;
+  /* template main color — Blue / White / Gold / Black theme */
+    --main-h: 220;
+    --main-s: 63%;
+    --main-l: 29%;
     --main: var(--main-h) var(--main-s) var(--main-l);
-    --main-two-h: 249;
-    --main-two-s: 63%;
-    --main-two-l: 15%;
+    --main-two-h: 0;
+    --main-two-s: 0%;
+    --main-two-l: 6%;
     --main-two: var(--main-two-h) var(--main-two-s) var(--main-two-l);
     --yellow-h: 40;
-    --yellow-s: 100%;
+    --yellow-s: 60%;
     --yellow-l: 54%;
     --yellow: var(--yellow-h) var(--yellow-s) var(--yellow-l);
     --spring-green-h: 144;
@@ -152,9 +152,9 @@
     --app-landing: var(--app-landing-h) var(--app-landing-s) var(--app-landing-l);
   /* White Color */
     --white: 0 0% 100%;
-    --black: 249 63% 15%;
+    --black: 0 0% 6%;
     --body: 0 0% 43%;
-    --orange: 18 100% 55%;
+    --orange: 40 60% 54%;
     --heading-color: var(--black);
     --blue-color: #1351D8;
     --translate-x-50: translateX(-50%);
@@ -8072,7 +8072,7 @@ svg.radial-progress text {
     --neutral-500: #6b7280;
     --neutral-600: #4b5563;
     --white: 0 0% 100%;
-    --orange: 18 100% 55%;
+    --orange: 40 60% 54%;
 }
 
 body {
@@ -8968,3 +8968,89 @@ h6 {
   border-bottom: 1px solid #f5f5f5;
 }
 .mobile-sub-link:hover { color: var(--main-600, #1f2b69); }
+
+/* ── Blue / White / Gold / Black theme overrides ── */
+:root {
+  --gold: #C9A84C;
+  --gold-dark: #A8871E;
+  --site-black: #0F0F0F;
+  --site-blue: #1A3D7A;
+}
+
+/* Gold replaces all teal/green accents */
+.bg-pink { background-color: var(--gold) !important; }
+.text-pink { color: var(--gold) !important; }
+
+/* Section SVG underline + dividers → gold */
+.section-divider {
+  background: linear-gradient(135deg, var(--site-blue), var(--gold)) !important;
+}
+.svg-line path { fill: var(--gold) !important; }
+
+/* Footer → dark black */
+.footer {
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a) !important;
+}
+
+/* Compliance / service card icons → blue */
+.compliance-icon {
+  background: linear-gradient(135deg, var(--site-blue), #0d2860) !important;
+}
+
+/* Contact icon teal → gold */
+.contact-icon { color: var(--gold) !important; }
+
+/* Social link hover → gold */
+.social-link:hover { background: var(--gold) !important; color: #0f0f0f !important; }
+
+/* Mobile sub-link hover */
+.mobile-sub-link:hover { color: var(--gold) !important; }
+
+/* Nav dropdown header label → gold */
+.nav-dropdown-menu .dropdown-header { color: var(--gold) !important; }
+/* Dropdown top border → gold */
+.nav-dropdown-menu { border-top-color: var(--gold) !important; }
+/* Dropdown item hover → gold */
+.nav-dropdown-menu li a:hover { color: var(--gold) !important; }
+
+/* Aviation card: teal quality card → gold gradient */
+.aviation-card-header[style*="#20ba8b"],
+.aviation-card-header[style*="20ba8b"] {
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark)) !important;
+}
+
+/* Aviation card checklist tick → gold */
+.aviation-card-body ul li::before { color: var(--gold) !important; }
+
+/* AOG note border → gold */
+[style*="border-left: 4px solid #20ba8b"] {
+  border-left-color: var(--gold) !important;
+}
+
+/* Private jets card (purple) → black */
+.aviation-card-header[style*="#7a1a5a"],
+.aviation-card-header[style*="7a1a5a"] {
+  background: linear-gradient(135deg, #1a1a1a, #2d2d2d) !important;
+}
+
+/* Helicopter card (dark blue) → site blue */
+.aviation-card-header[style*="#1a2a7a"],
+.aviation-card-header[style*="1a2a7a"] {
+  background: linear-gradient(135deg, var(--site-blue), #0d2860) !important;
+}
+
+/* Header announcement bar → site blue */
+.bg-main-600 { background-color: var(--site-blue) !important; }
+
+/* CTA sections (bg-main-two-600) → black */
+.bg-main-two-600 { background-color: var(--site-black) !important; }
+
+/* Aviation CTA gradient → blue to black */
+.aviation-cta {
+  background: linear-gradient(135deg, var(--site-blue) 0%, var(--site-black) 100%) !important;
+}
+
+/* Get in Touch strip → black */
+.show-case.bg-main-two-600 {
+  background-color: var(--site-black) !important;
+}

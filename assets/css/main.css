@@ -9146,10 +9146,22 @@ h6 {
 }
 
 /* ── Aviation image card (replaces stock photo) ── */
+/* Lock all three commodity card images to identical height */
+.group-item > p.overflow-hidden {
+  height: 320px !important;
+  min-height: 320px !important;
+  display: block;
+}
+.group-item > p.overflow-hidden img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .aviation-img-card {
   background: linear-gradient(135deg, #0A2040 0%, #1A3D7A 55%, #0D2B5E 100%);
-  height: 300px;
-  min-height: 300px;
+  height: 320px;
+  min-height: 320px;
   display: flex;
   flex-direction: column;
   align-items: center;

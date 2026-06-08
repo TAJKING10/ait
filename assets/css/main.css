@@ -9144,3 +9144,37 @@ h6 {
   .gradient-bg-one { padding-inline: 1rem !important; }
   .drag-rotate-element-section { margin-top: 1.5rem !important; }
 }
+
+/* ── Aviation image card (replaces stock photo) ── */
+.aviation-img-card {
+  background: linear-gradient(135deg, #0A2040 0%, #1A3D7A 55%, #0D2B5E 100%);
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.aviation-img-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 70% 30%, rgba(201,168,76,0.12) 0%, transparent 60%);
+}
+.avi-icon-row { font-size: 3.8rem; line-height: 1; margin-bottom: 0.6rem; position: relative; }
+.avi-sub-icons { display: flex; gap: 1.1rem; justify-content: center; font-size: 1.5rem; margin-bottom: 0.75rem; position: relative; }
+.avi-label {
+  color: #C9A84C;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin: 0;
+  position: relative;
+}

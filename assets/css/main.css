@@ -8910,7 +8910,8 @@ h6 {
   }
 /* ── Services Nav Dropdown ── */
 .nav-dropdown { position: relative; }
-.nav-dropdown > a { cursor: default; user-select: none; }
+.nav-dropdown > a { cursor: pointer; user-select: none; }
+.nav-dropdown.open .nav-dropdown-menu { display: block; }
 .nav-dropdown-menu {
   display: none;
   position: absolute;
@@ -8928,7 +8929,6 @@ h6 {
   overflow: hidden;
   border-top: 3px solid var(--main-600, #1f2b69);
 }
-.nav-dropdown:hover .nav-dropdown-menu { display: block; }
 /* Header label inside dropdown */
 .nav-dropdown-menu .dropdown-header {
   display: block;

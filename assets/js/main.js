@@ -896,9 +896,26 @@ var planExecuteSlider = new Swiper('.testimonials-three-slider', {
 
   // ========================= Preloader Js Start =====================
     $(window).on("load", function(){
-      $('.preloader').fadeOut(); 
+      $('.preloader').fadeOut();
     })
     // ========================= Preloader Js End=====================
+
+  // ========================= Nav Dropdown Click Toggle ======================
+  document.addEventListener('click', function (e) {
+    var trigger = e.target.closest('.nav-dropdown > a');
+    var inside  = e.target.closest('.nav-dropdown');
+
+    if (trigger) {
+      e.preventDefault();
+      var dropdown = trigger.closest('.nav-dropdown');
+      var wasOpen  = dropdown.classList.contains('open');
+      document.querySelectorAll('.nav-dropdown.open').forEach(function (d) { d.classList.remove('open'); });
+      if (!wasOpen) dropdown.classList.add('open');
+    } else if (!inside) {
+      document.querySelectorAll('.nav-dropdown.open').forEach(function (d) { d.classList.remove('open'); });
+    }
+  });
+  // ========================= Nav Dropdown Click Toggle End ==================
 
 
 })(jQuery);

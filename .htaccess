@@ -1,17 +1,20 @@
 RewriteEngine On
-# Set index.html as the default page (IMPORTANT!)
+# Disable directory listings
+Options -Indexes
+# Set index.html as the default page
 DirectoryIndex index.html
 # Redirect the temporary OVH domain to your real domain
 RewriteCond %{HTTP_HOST} ^advensv\.cluster030\.hosting\.ovh\.net [NC]
 RewriteRule ^(.*)$ https://www.advensys-trading.lv/$1 [L,R=301]
-# Force www version  
+# Force www version
 RewriteCond %{HTTP_HOST} ^advensys-trading\.lv [NC]
 RewriteRule ^(.*)$ https://www.advensys-trading.lv/$1 [L,R=301]
+# Redirect /services/ directory to services.html
+RewriteRule ^services/?$ /services.html [R=301,L]
 # Handle clean section paths like services/aviation
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^/\.]+)/([^/]+)/?$ $1.html [NC,L]
-# Remove .html extension from URLs (optional)
-RewriteCond %{REQUEST_FILENAME} !-d
+# Remove .html extension from URLs
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
 # Custom error pages (optional)

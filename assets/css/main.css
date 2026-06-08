@@ -9091,3 +9091,56 @@ h6 {
   cursor: grab; white-space: nowrap; min-width: 140px;
 }
 .fin-pill-gold { background: rgba(201,168,76,0.25); border-color: rgba(201,168,76,0.55); color: #f5d78a; }
+
+/* ── Global spacing reduction ── */
+
+/* Contact page breadcrumb hero — was 270px top / 170px bottom */
+.breadcrumb {
+  padding-block-start: 80px !important;
+  padding-block-end: 60px !important;
+}
+@media (max-width: 768px) {
+  .breadcrumb {
+    padding-block-start: 50px !important;
+    padding-block-end: 40px !important;
+  }
+}
+
+/* py-120 sections — reduce desktop padding */
+@media (min-width: 992px) {
+  .py-120 { padding-block-start: 70px !important; padding-block-end: 70px !important; }
+}
+
+/* Banner hero sections — was 80px */
+.tw-py-80-px { padding-block: 50px !important; }
+@media (max-width: 768px) {
+  .tw-py-80-px { padding-block: 32px !important; }
+}
+
+/* py-140 on financial section */
+.py-140 { padding-block-start: 70px !important; padding-block-end: 70px !important; }
+@media (max-width: 768px) {
+  .py-140 { padding-block-start: 40px !important; padding-block-end: 40px !important; }
+}
+
+/* Mobile: general section compression */
+@media (max-width: 576px) {
+  .py-120 { padding-block-start: 40px !important; padding-block-end: 40px !important; }
+  .py-5   { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+  section.py-4 { padding-top: 1.5rem !important; padding-bottom: 1.5rem !important; }
+  .banner.tw-py-80-px { padding-block: 28px !important; }
+}
+
+/* Mobile: compress large heading gaps */
+@media (max-width: 768px) {
+  .tw-mb-15 { margin-block-end: 1.75rem !important; }
+  .tw-mb-12 { margin-block-end: 1.5rem !important; }
+  .tw-mb-14 { margin-block-end: 1.5rem !important; }
+  .tw-mt-15 { margin-block-start: 1.75rem !important; }
+  .tw-px-90-px { padding-inline: 1rem !important; }
+  .tw-ps-56-px { padding-inline-start: 1.25rem !important; }
+  .tw-pe-12  { padding-inline-end: 0 !important; }
+  .tw-py-84-px { padding-block: 2rem !important; }
+  .gradient-bg-one { padding-inline: 1rem !important; }
+  .drag-rotate-element-section { margin-top: 1.5rem !important; }
+}

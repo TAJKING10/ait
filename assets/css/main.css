@@ -8910,6 +8910,7 @@ h6 {
   }
 /* ── Services Nav Dropdown ── */
 .nav-dropdown { position: relative; }
+.nav-dropdown > a { cursor: default; user-select: none; }
 .nav-dropdown-menu {
   display: none;
   position: absolute;

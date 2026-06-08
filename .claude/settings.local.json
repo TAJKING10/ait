@@ -1,7 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "Bash(python -m http.server 8080)"
+      "Bash(python -m http.server 8080)",
+      "Bash(powershell -Command \"Compress-Archive -Path ''index.html'',''about.html'',''contact.html'',''services.html'',''assets'' -DestinationPath ''touficdeployait.zip'' -Force\")",
+      "Bash(powershell -Command \"Compress-Archive -Path ''index.html'',''about.html'',''contact.html'',''services.html'',''assets'',''.htaccess'' -DestinationPath ''touficdeployait.zip'' -Force\")",
+      "Bash(rm -f touficdeployait.zip)",
+      "Bash(powershell -Command \"Compress-Archive -Path ''deploy\\\\*'' -DestinationPath ''touficdeployait.zip'' -Force\")"
     ]
   }
 }

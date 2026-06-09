@@ -8400,6 +8400,10 @@ h6 {
 .button--stroke {
     position: relative;
 }
+.btn-light.button--stroke::after { border-color: transparent; }
+.btn-outline-light.button--stroke::after { border-color: transparent; }
+.hover-style-cta-light .button__flair::before { background-color: #C9A84C; }
+.hover-style-cta-outline .button__flair::before { background-color: rgba(255,255,255,0.25); }
 
 .button__flair {
     position: absolute;

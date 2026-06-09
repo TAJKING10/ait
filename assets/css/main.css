@@ -8388,14 +8388,21 @@ h6 {
 .hover-style-two:hover .button__flair::before {
     background-color: #C9A84C;
 }
+.hover-style-two:hover .button__label {
+    color: #1f2b69 !important;
+}
 
 .hover-style-five:hover {
-    color: var(--main-two-600) !important;
+    color: #1f2b69 !important;
+}
+.hover-style-five:hover .button__label {
+    color: #1f2b69 !important;
 }
 
 .hover-style-five .button__flair::before {
-    background-color: hsl(var(--orange));
+    background-color: #C9A84C;
 }
+.hover-style-cta-light:hover .button__label { color: #1f2b69 !important; }
 
 .button--stroke {
     position: relative;

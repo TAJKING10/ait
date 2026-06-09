@@ -561,38 +561,44 @@
                     </style>
 
                     <div
-                      class="d-inline-flex align-items-center tw-gap-5 tw-mt-3 flex-wrap"
+                      class="d-flex flex-column align-items-stretch tw-gap-3 tw-mt-3"
+                      style="max-width: 480px; margin: 0 auto;"
                       data-aos="fade-up"
                       data-aos-anchor-placement="top-bottom"
                       data-aos-duration="800"
                     >
-                      <a
-                        href="about.html"
-                        class="flex-grow-1 hover--translate-y-1 active--translate-y-scale-9 btn btn-main-two hover-style-two button--stroke align-items-center justify-content-center tw-gap-5 group active--translate-y-2 tw-px-10 rounded-pill tw-py-505 fw-bold"
-                        data-block="button"
-                      >
-                        <span class="button__flair"></span>
-                        <span class="button__label">Learn More</span>
-                      </a>
-                      <a
-                        href="contact.html"
-                        class="flex-grow-1 hover--translate-y-1 active--translate-y-scale-9 btn btn-orange-outline hover-style-five hover-text-white button--stroke align-items-center justify-content-center tw-gap-5 group active--translate-y-2 tw-px-10 rounded-pill tw-py-505 fw-bold bg-white"
-                        data-block="button"
-                      >
-                        <span class="button__flair"></span>
-                        <span class="button__label">Contact Us</span>
-                      </a>
-
-                      <!-- VIDEO BUTTON - FIXED -->
-                      <button type="button" class="flex-grow-1 hover--translate-y-1 active--translate-y-scale-9 btn btn-video hover-style-two button--stroke align-items-center justify-content-center tw-gap-5 group active--translate-y-2 tw-px-10 rounded-pill tw-py-505 fw-bold" id="openVideoModal" data-block="button">
-                        <span class="button__flair"></span>
-                        <span class="button__label">Watch Forbes Interview</span>
-                      </button>
-                      <!-- BFM TV BUTTON -->
-                      <a href="https://www.bfmtv.com/economie/replay-emissions/objectif-croissance/video-irvin-dulberg-advensys-advensys-conseil-fiscal-et-patrimonial-01-08_VN-202508010294.html" target="_blank" rel="noopener" class="flex-grow-1 hover--translate-y-1 active--translate-y-scale-9 btn btn-video hover-style-two button--stroke align-items-center justify-content-center tw-gap-5 group active--translate-y-2 tw-px-10 rounded-pill tw-py-505 fw-bold" data-block="button">
-                        <span class="button__flair"></span>
-                        <span class="button__label">▶ Watch BFM TV Interview</span>
-                      </a>
+                      <!-- Row 1: Learn More + Contact Us -->
+                      <div class="d-flex gap-3">
+                        <a
+                          href="about.html"
+                          class="flex-grow-1 hover--translate-y-1 active--translate-y-scale-9 btn btn-main-two hover-style-two button--stroke align-items-center justify-content-center tw-gap-5 group active--translate-y-2 tw-px-10 rounded-pill tw-py-505 fw-bold"
+                          data-block="button"
+                        >
+                          <span class="button__flair"></span>
+                          <span class="button__label">Learn More</span>
+                        </a>
+                        <a
+                          href="contact.html"
+                          class="flex-grow-1 hover--translate-y-1 active--translate-y-scale-9 btn btn-orange-outline hover-style-five hover-text-white button--stroke align-items-center justify-content-center tw-gap-5 group active--translate-y-2 tw-px-10 rounded-pill tw-py-505 fw-bold bg-white"
+                          data-block="button"
+                        >
+                          <span class="button__flair"></span>
+                          <span class="button__label">Contact Us</span>
+                        </a>
+                      </div>
+                      <!-- Row 2: Video buttons -->
+                      <div class="d-flex gap-3">
+                        <!-- VIDEO BUTTON - FIXED -->
+                        <button type="button" class="flex-grow-1 hover--translate-y-1 active--translate-y-scale-9 btn btn-video hover-style-two button--stroke align-items-center justify-content-center tw-gap-5 group active--translate-y-2 tw-px-10 rounded-pill tw-py-505 fw-bold" id="openVideoModal" data-block="button">
+                          <span class="button__flair"></span>
+                          <span class="button__label">▶ Watch Forbes</span>
+                        </button>
+                        <!-- BFM TV BUTTON -->
+                        <a href="https://www.bfmtv.com/economie/replay-emissions/objectif-croissance/video-irvin-dulberg-advensys-advensys-conseil-fiscal-et-patrimonial-01-08_VN-202508010294.html" target="_blank" rel="noopener" class="flex-grow-1 hover--translate-y-1 active--translate-y-scale-9 btn btn-video hover-style-two button--stroke align-items-center justify-content-center tw-gap-5 group active--translate-y-2 tw-px-10 rounded-pill tw-py-505 fw-bold" data-block="button">
+                          <span class="button__flair"></span>
+                          <span class="button__label">▶ Watch BFM TV</span>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>

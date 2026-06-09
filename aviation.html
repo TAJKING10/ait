@@ -58,6 +58,18 @@
     .aviation-cta { background: linear-gradient(135deg, var(--main-600, #1f2b69) 0%, var(--main-two-600, #20ba8b) 100%); border-radius: 16px; padding: 2rem; color: white; text-align: center; }
     .section-divider { width: 60px; height: 4px; background: linear-gradient(135deg, var(--main-600, #1f2b69), #FF7E3E); border-radius: 2px; margin: 1rem auto 0; }
     @media (max-width: 768px) { .aviation-card-header { padding: 1rem 1.25rem 0.75rem; } .aviation-card-body { padding: 0.75rem 1.25rem 1rem; } .aviation-cta { padding: 1.5rem 1rem; } }
+    /* Read More toggle */
+    .avi-more-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+    .avi-more-content.open { max-height: 600px; }
+    .avi-read-more-btn {
+      border: none; background: transparent; color: #1A3D7A;
+      font-size: 0.85rem; font-weight: 700; cursor: pointer;
+      padding: 0.5rem 0 0; display: inline-flex; align-items: center; gap: 0.3rem;
+      transition: color 0.2s;
+    }
+    .avi-read-more-btn:hover { color: #C9A84C; }
+    .avi-read-more-btn i { transition: transform 0.3s ease; }
+    .avi-read-more-btn.open i { transform: rotate(180deg); }
   </style>
 </head>
 <body>
@@ -214,7 +226,6 @@
                     </div>
                   </div>
                   <button class="avi-read-more-btn" onclick="toggleAviMore(this)">Read more <i class="ph ph-caret-down"></i></button>
-                </div>
                 </div>
               </div>
             </div>
@@ -443,6 +454,16 @@
     document.addEventListener("keydown", function(e) { if (e.key === "Escape") closeMenu(); });
     window.addEventListener("load", function() { const p = document.querySelector(".preloader"); if (p) { p.style.opacity = "0"; setTimeout(() => p.style.display = "none", 300); } });
   });
+  </script>
+  <script>
+  function toggleAviMore(btn) {
+    var content = btn.previousElementSibling;
+    var isOpen = content.classList.contains('open');
+    content.classList.toggle('open');
+    btn.innerHTML = isOpen
+      ? 'Read more <i class="ph ph-caret-down"></i>'
+      : 'Read less <i class="ph ph-caret-up"></i>';
+  }
   </script>
 </body>
 </html>

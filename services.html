@@ -166,6 +166,17 @@
       .aviation-card-body { padding: 0.75rem 1.25rem 1rem; }
       .aviation-cta { padding: 1.5rem 1rem; }
     }
+    .avi-more-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+    .avi-more-content.open { max-height: 600px; }
+    .avi-read-more-btn {
+      border: none; background: transparent; color: #1A3D7A;
+      font-size: 0.85rem; font-weight: 700; cursor: pointer;
+      padding: 0.5rem 0 0; display: inline-flex; align-items: center; gap: 0.3rem;
+      transition: color 0.2s;
+    }
+    .avi-read-more-btn:hover { color: #C9A84C; }
+    .avi-read-more-btn i { transition: transform 0.3s ease; }
+    .avi-read-more-btn.open i { transform: rotate(180deg); }
   </style>
 </head>
 <body>
@@ -1047,6 +1058,17 @@
 
     window.addEventListener("pageshow", function() { if (isMobileMenuOpen) closeMobileMenu(); });
   });
+  </script>
+  <script>
+  function toggleAviMore(btn) {
+    var content = btn.previousElementSibling;
+    var isOpen = content.classList.contains('open');
+    content.classList.toggle('open');
+    btn.innerHTML = isOpen
+      ? 'Read more <i class="ph ph-caret-down"></i>'
+      : 'Read less <i class="ph ph-caret-up"></i>';
+    btn.classList.toggle('open', !isOpen);
+  }
   </script>
 </body>
 </html>

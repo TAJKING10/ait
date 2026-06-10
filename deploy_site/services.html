@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en" class="heading-black">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="Advensys International Trading SIA – Our Services: Aviation, Aircraft Spare Parts, Commodities, Financial Intermediation">
+  <meta name="keywords" content="Advensys International Trading SIA, aircraft spare parts, helicopters, private jets, commodities, financial intermediation">
+  <meta name="robots" content="INDEX,FOLLOW">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services – Advensys International Trading SIA</title>
+  <link rel="shortcut icon" href="assets/images/img/logo.png" />
+
+  <!-- Bootstrap 5.3.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- AOS -->
+  <link rel="stylesheet" href="assets/css/aos.css" />
+  <!-- Swiper -->
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+  <!-- Magnific -->
+  <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+  <!-- Satoshi -->
+  <link rel="stylesheet" href="assets/css/satoshi.css" />
+  <!-- Main css -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+
+  <style>
+    /* ── Mobile Menu ── */
+    .mobile-menu {
+      position: fixed; top: 0; right: -100%; width: 300px; height: 100vh;
+      background: white; z-index: 9998; transition: right 0.3s ease;
+      padding: 2rem; box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+    }
+    .mobile-menu.active { right: 0; }
+    .mobile-menu .nav-menu { list-style: none; padding: 0; margin: 0; }
+    .mobile-menu .nav-menu li { margin-bottom: 1rem; }
+    .mobile-menu .nav-menu a {
+      display: block; padding: 0.75rem 0; text-decoration: none;
+      color: #333; font-weight: 600; border-bottom: 1px solid #eee;
+    }
+    .mobile-menu .mobile-menu-close {
+      position: absolute; top: 1rem; right: 1rem;
+      background: none; border: none; font-size: 1.5rem; cursor: pointer;
+    }
+    .mobile-overlay {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5); z-index: 9997; opacity: 0;
+      visibility: hidden; transition: all 0.3s ease;
+    }
+    .mobile-overlay.active { opacity: 1; visibility: visible; }
+
+    /* ── Footer ── */
+    .footer {
+      background: linear-gradient(135deg, #0A2040, #0D2B5E);
+      color: white; padding: 3rem 0 1rem; margin-top: 3rem;
+    }
+    .footer h5, .footer h6 { color: white; margin-bottom: 1rem; }
+    .footer p { color: rgba(255,255,255,0.8); margin-bottom: 0.5rem; }
+    .footer-links { list-style: none; padding: 0; margin: 0; }
+    .footer-links li { margin-bottom: 0.5rem; }
+    .footer-links p { color: rgba(255,255,255,0.92); cursor: pointer; transition: color 0.3s ease; }
+    .footer-links p:hover { color: white; }
+    .contact-info { margin-top: 1rem; }
+    .contact-item { display: flex; align-items: center; margin-bottom: 0.5rem; }
+    .contact-icon { width: 16px; height: 16px; margin-right: 0.5rem; color: #C9A84C; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.2);
+      margin-top: 2rem; padding-top: 1rem;
+    }
+    .copyright-text { color: rgba(255,255,255,0.7); font-size: 0.9rem; margin: 0; }
+    .social-links { display: flex; justify-content: flex-end; gap: 1rem; }
+    .social-link {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 35px; height: 35px; background: rgba(255,255,255,0.1);
+      border-radius: 50%; color: white; text-decoration: none; transition: all 0.3s ease;
+    }
+    .social-link:hover { background: #C9A84C; color: white; transform: translateY(-2px); }
+    .legal-links { text-align: center; }
+    .legal-links a {
+      color: rgba(255,255,255,0.7); text-decoration: none;
+      margin: 0 0.5rem; font-size: 0.85rem;
+    }
+    .legal-links a:hover { color: white; text-decoration: underline; }
+
+    /* ── Compliance / Service Cards ── */
+    .compliance-item {
+      text-align: center; padding: 2rem; background: white;
+      border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      height: 100%; transition: transform 0.3s ease;
+    }
+    .compliance-item:hover { transform: translateY(-5px); }
+    .compliance-icon {
+      width: 80px; height: 80px; margin: 0 auto 1.5rem;
+      background: linear-gradient(135deg, #1A3D7A, #0d2860);
+      border-radius: 50%; display: flex; align-items: center;
+      justify-content: center; color: white; font-size: 2rem;
+    }
+
+    /* ── Aviation Cards ── */
+    .aviation-card {
+      background: white; border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      overflow: hidden; transition: all 0.3s ease; height: 100%;
+    }
+    .aviation-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(0,0,0,0.13); }
+    .aviation-card-header {
+      padding: 1.25rem 1.5rem 1rem;
+      background: linear-gradient(135deg, var(--main-600, #1f2b69), var(--main-two-600, #20ba8b));
+      color: white;
+    }
+    .aviation-card-header .icon {
+      font-size: 2rem; margin-bottom: 0.4rem; display: block;
+    }
+    .aviation-card-body { padding: 1rem 1.5rem 1.25rem; }
+    .aviation-card-body ul { list-style: none; padding: 0; margin: 0; }
+    .aviation-card-body ul li {
+      padding: 0.3rem 0; border-bottom: 1px solid #f0f0f0;
+      color: #555; font-size: 0.9rem;
+    }
+    .aviation-card-body ul li:last-child { border-bottom: none; }
+    .aviation-card-body ul li::before {
+      content: "✓"; color: #C9A84C; font-weight: bold; margin-right: 0.4rem;
+    }
+
+    /* ── Aircraft Type Badges ── */
+    .aircraft-badge {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      background: rgba(31, 43, 105, 0.08); border: 1px solid rgba(31,43,105,0.2);
+      border-radius: 30px; padding: 0.4rem 1rem; font-size: 0.85rem;
+      font-weight: 600; color: var(--main-600, #1f2b69); margin: 0.25rem;
+      transition: all 0.2s ease;
+    }
+    .aircraft-badge:hover {
+      background: var(--main-600, #1f2b69); color: white;
+    }
+
+    /* ── Process Steps ── */
+    .process-step {
+      text-align: center; padding: 0.75rem 0.5rem;
+    }
+    .process-step .step-number {
+      width: 46px; height: 46px; background: var(--main-600, #1f2b69);
+      color: white; border-radius: 50%; display: flex; align-items: center;
+      justify-content: center; font-size: 1.1rem; font-weight: 700;
+      margin: 0 auto 0.6rem;
+    }
+    .process-connector {
+      display: flex; align-items: center; justify-content: center;
+      color: #ccc; font-size: 1.5rem; padding-top: 1rem;
+    }
+
+    /* ── CTA Banner ── */
+    .aviation-cta {
+      background: linear-gradient(135deg, var(--main-600, #1f2b69) 0%, var(--main-two-600, #20ba8b) 100%);
+      border-radius: 16px; padding: 2rem; color: white; text-align: center;
+    }
+
+    /* ── Section Divider ── */
+    .section-divider {
+      width: 60px; height: 4px;
+      background: linear-gradient(135deg, var(--main-600, #1f2b69), #FF7E3E);
+      border-radius: 2px; margin: 1rem auto 0;
+    }
+
+    @media (max-width: 768px) {
+      .aviation-card-header { padding: 1rem 1.25rem 0.75rem; }
+      .aviation-card-body { padding: 0.75rem 1.25rem 1rem; }
+      .aviation-cta { padding: 1.5rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!--==================== Preloader ====================-->
+  <div class="preloader">
+    <div class="cssload-loading"><i></i><i></i><i></i><i></i></div>
+  </div>
+
+  <div class="overlay"></div>
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <div class="side-overlay"></div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" id="closeMobileMenu">&times;</button>
+    <div class="mobile-menu-header">
+      <img src="assets/images/img/logo.png" alt="Logo" class="max-w-200-px" style="height: 80px;" />
+    </div>
+    <ul class="nav-menu mt-4">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="aviation.html" class="mobile-sub-link">Aviation</a></li>
+      <li><a href="commodities.html" class="mobile-sub-link">Commodities</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="mt-4">
+      <div class="contact-item">
+        <svg class="contact-icon" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+        </svg>
+        <span>+371 206 828 42</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast-container"></div>
+
+  <!-- Scroll to Top -->
+  <div class="progress-wrap">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor"></div>
+  <span class="dot"></span>
+
+  <div id="smooth-wrapper">
+
+    <!-- ── Top Announcement Bar ── -->
+    <div class="bg-main-600 tw-py-205 d-sm-block d-none">
+      <div class="container">
+        <div class="d-flex justify-content-center">
+          <p class="text-white bg-white-13 d-inline-block tw-py-1 tw-px-5 rounded-pill fw-normal">
+            ✈️ New: Aircraft Spare Parts &amp; Pre-Owned Aircraft – Contact us at contact@advensys-trading.lv
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Header ── -->
+    <header class="header bg-white transition-all">
+      <div class="container container-two">
+        <nav class="d-flex align-items-center justify-content-between">
+          <div class="logo">
+            <a href="index.html" class="link hover--translate-y-1 active--translate-y-scale-9">
+              <img src="assets/images/img/logo.png" alt="Logo" class="max-w-200-px" style="height: 80px;" />
+            </a>
+          </div>
+
+          <div class="header-menu d-lg-block d-none">
+            <ul class="nav-menu d-lg-flex align-items-center tw-gap-14">
+              <li class="nav-menu__item">
+                <a href="index.html" class="nav-menu__link hover--translate-y-1 text-heading tw-py-9 fw-semibold w-100">Home</a>
+              </li>
+              <li class="nav-menu__item">
+                <a href="about.html" class="nav-menu__link hover--translate-y-1 text-heading tw-py-9 fw-semibold w-100">About</a>
+              </li>
+              <li class="nav-menu__item nav-dropdown">
+                <a href="javascript:void(0)" class="nav-menu__link hover--translate-y-1 tw-py-9 fw-semibold w-100 d-inline-flex align-items-center gap-1" style="color: var(--main-600);">Services <i class="ph ph-caret-down" style="font-size:0.7rem;margin-top:2px;"></i></a>
+                <ul class="nav-dropdown-menu">
+                  <span class="dropdown-header">Our Services</span>
+                  <li><a href="aviation.html">Aviation</a></li>
+                  <li><a href="commodities.html">Commodities</a></li>
+                </ul>
+              </li>
+              <li class="nav-menu__item">
+                <a href="contact.html" class="nav-menu__link hover--translate-y-1 text-heading tw-py-9 fw-semibold w-100">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="d-flex align-items-center tw-gap-6">
+            <p class="hover--translate-y-1 active--translate-y-scale-9 d-sm-inline-flex d-none align-items-center justify-content-center tw-gap-5 group active--translate-y-2 tw-px-9 rounded-pill tw-py-4 fw-semibold" data-block="button">
+              <img src="assets/images/icons/contact-icon2.svg" alt="Icon" style="height: 30px" />
+              <span class="button__label">+371 206 828 42</span>
+            </p>
+            <button type="button" class="toggle-mobileMenu leading-none d-lg-none text-neutral-800 tw-text-9" id="openMobileMenu">
+              <i class="ph ph-list"></i>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div id="smooth-content">
+
+      <!-- ══════════════════════════════════════════════
+           HERO BANNER  (same section-bg-three as homepage)
+           ══════════════════════════════════════════════ -->
+      <section class="banner tw-py-80-px overflow-hidden section-bg-three position-relative">
+        <div class="container max-w-1400-px">
+          <div class="row gy-4 align-items-center">
+            <div class="position-relative">
+              <div class="container">
+                <div class="text-center">
+                  <span class="text-capitalize font-caveat fw-bold tw-mb-6 h3">
+                    Full-Spectrum International Trading Services
+                  </span>
+                  <div>
+                    <div class="position-relative d-inline-block">
+                      <h1 class="splitTextStyleOne text-capitalize fw-bold tw-leading-none tw-pb-205">
+                        What We Offer
+                      </h1>
+                      <div class="text-end svg-line d-sm-block d-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="889" height="18" viewBox="0 0 489 18" fill="none">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M207.684 1.72387C184.71 2.31462 162.007 3.04101 139.867 3.83514C108.526 4.95854 77.1964 6.12068 46.056 7.96073C36.2537 8.5418 26.2994 8.90979 16.5584 9.63613C10.4436 10.0913 2.33552 10.7401 1.27144 10.8757C0.714878 10.9531 0.472071 11.0695 0.393613 11.1082C-0.158042 11.3794 -0.0573853 11.6407 0.253993 11.8441C0.379035 11.9313 0.695229 12.1444 1.57297 12.1735C60.274 14.1588 120.299 10.285 179.071 9.87824C280.993 9.18096 386.003 11.9507 487.115 17.9938C487.998 18.0423 488.856 17.8001 488.979 17.4418C489.126 17.0931 488.489 16.7542 487.606 16.7057C386.322 10.6529 281.14 7.87347 179.022 8.58044C124.249 8.95813 68.3944 12.3575 13.5451 11.1953C14.8053 11.0985 16.0411 11.0016 17.1689 10.9144C26.8707 10.1881 36.7833 9.8298 46.5464 9.24873C77.6205 7.40868 108.886 6.24654 140.186 5.13282C179.022 3.73826 219.55 2.53737 260.397 1.97567C275.01 2.06283 289.574 2.15003 304.137 2.25656C335.643 2.48899 367.296 3.16691 398.728 4.07725C408.192 4.3581 417.656 4.64861 427.12 4.9004C430.258 4.98757 438.349 5.23932 439.477 5.21995C440.875 5.20058 441.144 4.73577 441.169 4.65829C441.242 4.48397 441.193 4.24185 440.507 4.03847C440.433 4.00942 439.992 3.91251 439.011 3.85441C381.86 0.426099 320.834 -0.145196 260.446 0.677985C196.749 0.319659 132.806 0.164636 69.2697 0C68.3601 0 67.6172 0.290577 67.6098 0.648903C67.6049 1.00723 68.338 1.29782 69.2476 1.3075C115.253 1.42371 161.492 1.53986 207.684 1.72387Z" fill="#FF7E3E" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="splitTextStyleOne text-neutral-600 tw-text-lg tw-mt-405 tw-mt-8 max-w-672-px mx-auto fw-medium">
+                    From refined fuels, metals and agricultural commodities to aircraft spare parts
+                    and pre-owned aviation assets — Advensys International Trading SIA connects
+                    verified buyers and sellers worldwide with secure, compliant intermediation.
+                  </p>
+                  <div class="d-inline-flex align-items-center tw-gap-5 tw-mt-3 flex-wrap" data-aos="fade-up" data-aos-duration="800">
+                    <a href="aviation.html" class="flex-grow-1 hover--translate-y-1 active--translate-y-scale-9 btn btn-main-two hover-style-two button--stroke align-items-center justify-content-center tw-gap-5 group active--translate-y-2 tw-px-10 rounded-pill tw-py-505 fw-bold" data-block="button">
+                      <span class="button__flair"></span>
+                      <span class="button__label">Aviation Services</span>
+                    </a>
+                    <a href="contact.html" class="flex-grow-1 hover--translate-y-1 active--translate-y-scale-9 btn btn-orange-outline hover-style-five hover-text-white button--stroke align-items-center justify-content-center tw-gap-5 group active--translate-y-2 tw-px-10 rounded-pill tw-py-505 fw-bold bg-white" data-block="button">
+                      <span class="button__flair"></span>
+                      <span class="button__label">Get a Quote</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════
+           SERVICE OVERVIEW BADGES
+           ══════════════════════════════════════════════ -->
+      <section class="py-5 bg-white">
+        <div class="container">
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a href="aviation.html" class="aircraft-badge">✈️ Aircraft Spare Parts</a>
+            <a href="aviation.html" class="aircraft-badge">🚁 Pre-Owned Helicopters</a>
+            <a href="aviation.html" class="aircraft-badge">🛩️ Pre-Owned Private Jets</a>
+            <a href="commodities.html" class="aircraft-badge">🛢️ Petroleum Products</a>
+            <a href="commodities.html" class="aircraft-badge">⚙️ Metals</a>
+            <a href="commodities.html" class="aircraft-badge">🌾 Agricultural Products</a>
+            <a href="commodities.html" class="aircraft-badge">🏦 Financial Intermediation</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════
+           SECTION 1 – AVIATION SPARE PARTS  (NEW)
+           ══════════════════════════════════════════════ -->
+      <section id="aviation" class="py-5 overflow-hidden">
+        <div class="container">
+          <div class="text-center mb-4" data-aos="fade-up" data-aos-duration="600">
+            <span class="tw-py-1 tw-px-705 bg-main-600 text-white tw-text-sm fw-bold text-capitalize rounded-pill tw-mb-205">
+              NEW SERVICE
+            </span>
+            <h2 class="splitTextStyleOne fw-bold tw-leading-104 mt-2 mb-2">
+              Aviation Division
+            </h2>
+            <div class="section-divider"></div>
+            <p class="text-neutral-500 max-w-600-px mx-auto mt-2 mb-0">
+              Advensys International Trading SIA now bridges the global aviation supply chain —
+              sourcing certified aircraft spare parts and facilitating the sale of pre-owned
+              helicopters and private jets with full documentation and compliance support.
+            </p>
+          </div>
+
+          <div class="row gy-4">
+            <!-- Card 1: Spare Parts -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-duration="600">
+              <div class="aviation-card h-100">
+                <div class="aviation-card-header">
+                  <span class="icon">🔧</span>
+                  <h3 class="text-white fw-bold mb-2">Aircraft Spare Parts</h3>
+                  <p class="text-white opacity-90 mb-0">
+                    Sourcing &amp; supply of certified, airworthy components for commercial,
+                    regional, helicopter and business-jet fleets worldwide.
+                  </p>
+                </div>
+                                <div class="aviation-card-body">
+                  <p class="text-neutral-600 mb-2 fw-medium">Components &amp; categories we handle:</p>
+                  <ul>
+                    <li>Aircraft engines &amp; APU units (serviceable / overhauled)</li>
+                    <li>Avionics systems – FMS, transponders, radios, displays</li>
+                  </ul>
+                  <div class="avi-more-content">
+                    <ul>
+                      <li>Landing gear assemblies &amp; components</li>
+                      <li>Airframe structural parts &amp; panels</li>
+                      <li>Hydraulic &amp; pneumatic system components</li>
+                      <li>Interior parts – seats, galleys, overhead panels</li>
+                      <li>Rotary-wing components (rotor blades, gearboxes)</li>
+                      <li>Consumables &amp; expendables (filters, seals, O-rings)</li>
+                    </ul>
+                    <div class="mt-2 p-2 rounded-3" style="background:#f8f9fa;">
+                      <p class="text-neutral-600 mb-1 fw-semibold small">Aircraft Types Supported:</p>
+                      <div>
+                        <span class="aircraft-badge" style="font-size:0.78rem;">Boeing 737 / 777 / 787</span>
+                        <span class="aircraft-badge" style="font-size:0.78rem;">Airbus A320 / A330 / A350</span>
+                        <span class="aircraft-badge" style="font-size:0.78rem;">Bombardier / Embraer</span>
+                        <span class="aircraft-badge" style="font-size:0.78rem;">Gulfstream / Dassault Falcon</span>
+                        <span class="aircraft-badge" style="font-size:0.78rem;">Bell / Airbus H135 / H145</span>
+                        <span class="aircraft-badge" style="font-size:0.78rem;">Sikorsky / Leonardo AW</span>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="avi-read-more-btn" onclick="toggleAviMore(this)">Read more <i class="ph ph-caret-down"></i></button>
+                </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2: Quality & Compliance -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-duration="800">
+              <div class="aviation-card h-100">
+                <div class="aviation-card-header" style="background: linear-gradient(135deg, #20ba8b, #0e8a67);">
+                  <span class="icon">📋</span>
+                  <h3 class="text-white fw-bold mb-2">Quality &amp; Compliance Standards</h3>
+                  <p class="text-white opacity-90 mb-0">
+                    Every part we source is fully traceable with complete documentation,
+                    meeting international airworthiness requirements.
+                  </p>
+                </div>
+                                <div class="aviation-card-body">
+                  <p class="text-neutral-600 mb-2 fw-medium">Documentation &amp; certifications provided:</p>
+                  <ul>
+                    <li>EASA Form 1 / FAA 8130-3 release certificates</li>
+                    <li>Serviceable tags with full traceability records</li>
+                  </ul>
+                  <div class="avi-more-content">
+                    <ul>
+                      <li>Airworthiness Directives (AD) compliance records</li>
+                      <li>Component Maintenance Manuals (CMM) references</li>
+                      <li>Aircraft-on-Ground (AOG) priority handling available</li>
+                      <li>Lot certification for consumables &amp; expendables</li>
+                      <li>Vendor approvals from certified MRO facilities</li>
+                      <li>Export documentation &amp; customs clearance support</li>
+                    </ul>
+                    <div class="mt-2 p-2 rounded-3" style="background:#fdf9ee;border-left:4px solid #C9A84C;">
+                      <p class="mb-0 text-neutral-600 small"><strong>AOG Support:</strong> Our network allows priority sourcing with rapid worldwide logistics to minimise downtime.</p>
+                    </div>
+                  </div>
+                  <button class="avi-read-more-btn" onclick="toggleAviMore(this)">Read more <i class="ph ph-caret-down"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════
+           SECTION 2 – PRE-OWNED AIRCRAFT  (NEW)
+           ══════════════════════════════════════════════ -->
+      <section id="secondhand" class="py-5 bg-neutral-50 overflow-hidden">
+        <div class="container">
+          <div class="text-center mb-4" data-aos="fade-up" data-aos-duration="600">
+            <span class="tw-py-1 tw-px-705 bg-main-two-600 text-white tw-text-sm fw-bold text-capitalize rounded-pill tw-mb-205">
+              Pre-Owned Aircraft
+            </span>
+            <h2 class="splitTextStyleOne fw-bold tw-leading-104 mt-2 mb-2">
+              Second-Hand Helicopters &amp; Private Jets
+            </h2>
+            <div class="section-divider"></div>
+            <p class="text-neutral-500 max-w-620-px mx-auto mt-2 mb-0">
+              We connect qualified buyers with verified sellers of pre-owned rotary-wing and
+              fixed-wing aircraft — providing a discreet, professional brokerage service backed
+              by thorough due diligence and legal compliance.
+            </p>
+          </div>
+
+          <!-- Aircraft type cards -->
+          <div class="row gy-4 mb-4">
+            <!-- Helicopters -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-duration="600">
+              <div class="aviation-card h-100">
+                <div class="aviation-card-header" style="background: linear-gradient(135deg, #1a2a7a, #2d4bbf);">
+                  <span class="icon">🚁</span>
+                  <h3 class="text-white fw-bold mb-2">Pre-Owned Helicopters</h3>
+                  <p class="text-white opacity-90 mb-0">
+                    Light single-engine to heavy twin-engine rotorcraft for
+                    executive, offshore, EMS, and utility operations.
+                  </p>
+                </div>
+                                <div class="aviation-card-body">
+                  <p class="text-neutral-600 fw-medium mb-2">Helicopter categories available:</p>
+                  <ul>
+                    <li>Light turbine – Robinson R66, Airbus H225/H125</li>
+                    <li>Medium twin – Airbus H135, H145, Bell 429</li>
+                  </ul>
+                  <div class="avi-more-content">
+                    <ul>
+                      <li>Super-medium – Airbus H155, Leonardo AW139</li>
+                      <li>Heavy twin – Sikorsky S-92, Leonardo AW101</li>
+                      <li>Corporate &amp; VIP configured rotorcraft</li>
+                      <li>Medevac / EMS equipped helicopters</li>
+                      <li>Offshore oil &amp; gas support helicopters</li>
+                    </ul>
+                    <div class="mt-2 p-2 rounded-3" style="background:#f0f4ff;">
+                      <p class="mb-0 text-neutral-600 small"><strong>Typical buyers:</strong> Private individuals, charter operators, air ambulance services, oil &amp; gas companies, government &amp; military clients.</p>
+                    </div>
+                  </div>
+                  <button class="avi-read-more-btn" onclick="toggleAviMore(this)">Read more <i class="ph ph-caret-down"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Private Jets -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-duration="800">
+              <div class="aviation-card h-100">
+                <div class="aviation-card-header" style="background: linear-gradient(135deg, #7a1a5a, #bf2d9a);">
+                  <span class="icon">🛩️</span>
+                  <h3 class="text-white fw-bold mb-2">Pre-Owned Private Jets</h3>
+                  <p class="text-white opacity-90 mb-0">
+                    Very Light Jets to ultra-long-range business jets — sourced globally
+                    and presented with complete technical &amp; financial transparency.
+                  </p>
+                </div>
+                                <div class="aviation-card-body">
+                  <p class="text-neutral-600 fw-medium mb-2">Private jet categories available:</p>
+                  <ul>
+                    <li>Very Light Jets (VLJ) – Embraer Phenom 100, Eclipse 550</li>
+                    <li>Light jets – Cessna Citation, Pilatus PC-24</li>
+                  </ul>
+                  <div class="avi-more-content">
+                    <ul>
+                      <li>Midsize jets – Bombardier Learjet 75, Hawker 900</li>
+                      <li>Super-midsize – Cessna Citation Latitude, Gulfstream G280</li>
+                      <li>Large cabin – Bombardier Challenger 604/605/650</li>
+                      <li>Ultra-long-range – Gulfstream G650ER, Global 7500</li>
+                      <li>VIP-configured airliners (ACJ / BBJ)</li>
+                    </ul>
+                    <div class="mt-2 p-2 rounded-3" style="background:#fdf0f8;">
+                      <p class="mb-0 text-neutral-600 small"><strong>Typical buyers:</strong> HNWIs, family offices, corporate flight departments, charter operators, fractional ownership programs.</p>
+                    </div>
+                  </div>
+                  <button class="avi-read-more-btn" onclick="toggleAviMore(this)">Read more <i class="ph ph-caret-down"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Transaction Process -->
+          <div class="bg-white rounded-4 common-shadow-five p-4" data-aos="fade-up" data-aos-duration="800">
+            <div class="text-center mb-3">
+              <span class="tw-py-1 tw-px-705 bg-main-50 text-main-600 tw-text-sm fw-bold text-capitalize rounded-pill">
+                Our Transaction Process
+              </span>
+              <h5 class="mt-2 mb-0">How We Facilitate Your Aircraft Transaction</h5>
+            </div>
+            <div class="row gy-4 text-center">
+              <div class="col-lg col-md-4 col-6" data-aos="fade-up" data-aos-duration="400">
+                <div class="process-step">
+                  <div class="step-number">1</div>
+                  <h6 class="fw-semibold">Initial Brief</h6>
+                  <p class="text-neutral-500 small">Define requirements: budget, specs, delivery timeline, registration country</p>
+                </div>
+              </div>
+              <div class="col-lg col-md-4 col-6" data-aos="fade-up" data-aos-duration="500">
+                <div class="process-step">
+                  <div class="step-number">2</div>
+                  <h6 class="fw-semibold">Market Search</h6>
+                  <p class="text-neutral-500 small">Access to global aircraft listings and our verified seller network</p>
+                </div>
+              </div>
+              <div class="col-lg col-md-4 col-6" data-aos="fade-up" data-aos-duration="600">
+                <div class="process-step">
+                  <div class="step-number">3</div>
+                  <h6 class="fw-semibold">Due Diligence</h6>
+                  <p class="text-neutral-500 small">Technical inspection, airworthiness review, lien &amp; encumbrance checks</p>
+                </div>
+              </div>
+              <div class="col-lg col-md-4 col-6" data-aos="fade-up" data-aos-duration="700">
+                <div class="process-step">
+                  <div class="step-number">4</div>
+                  <h6 class="fw-semibold">Negotiation</h6>
+                  <p class="text-neutral-500 small">Price negotiation, LOI / purchase agreement drafting with legal support</p>
+                </div>
+              </div>
+              <div class="col-lg col-md-4 col-6" data-aos="fade-up" data-aos-duration="800">
+                <div class="process-step">
+                  <div class="step-number">5</div>
+                  <h6 class="fw-semibold">Closing &amp; Transfer</h6>
+                  <p class="text-neutral-500 small">Escrow management, title transfer, re-registration &amp; delivery coordination</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════
+           AVIATION CTA
+           ══════════════════════════════════════════════ -->
+      <section class="py-4 overflow-hidden">
+        <div class="container">
+          <div class="aviation-cta" data-aos="fade-up" data-aos-duration="800">
+            <h3 class="text-white fw-bold mb-3">Looking to Buy or Sell an Aircraft?</h3>
+            <p class="text-white opacity-90 max-w-600-px mx-auto mb-4">
+              Whether you need a single spare component or are purchasing a complete aircraft,
+              our aviation specialists — led by <strong>Elsa Tammisto</strong> —
+              are ready to assist. Contact us today for a confidential discussion.
+            </p>
+            <div class="d-inline-flex flex-wrap gap-3 justify-content-center">
+              <a href="contact.html" class="btn btn-light fw-bold rounded-pill tw-px-10 tw-py-505" style="color: #1f2b69;">
+                Contact Aviation Team
+              </a>
+              <a href="mailto:contact@advensys-trading.lv" class="btn btn-outline-light fw-bold rounded-pill tw-px-10 tw-py-505">
+                ✉ contact@advensys-trading.lv
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════
+           SECTION 3 – COMMODITIES BROKERAGE (existing)
+           ══════════════════════════════════════════════ -->
+      <div class="position-relative z-1">
+        <img src="assets/images/shapes/shape-image.png" alt="Shape" class="position-absolute w-100 tw-start-0 bottom-0 z-n1">
+        <section id="commodities" class="blog">
+          <div class="container">
+            <div class="bg-white common-shadow-five py-120 tw-px-90-px">
+              <span class="line w-0 tw-h-2 bg-main-600 tw-mb-4"></span>
+              <div class="d-flex flex-column align-items-center justify-content-center tw-mb-12">
+                <span class="tw-py-1 tw-px-705 bg-main-50 text-main-600 tw-text-sm fw-bold text-capitalize rounded-pill tw-mb-205">
+                  Commodities Brokerage
+                </span>
+                <h4 class="">Our Core Expertise in Global Commodities</h4>
+                <p class="text-center max-w-600-px">
+                  We facilitate direct transactions with verified sellers and refineries across petroleum products,
+                  metals, and agricultural commodities through secure trade mechanisms.
+                </p>
+              </div>
+
+              <div class="row gy-4">
+                <div class="col-sm-4" data-aos="fade-up" data-aos-duration="200">
+                  <div class="group-item">
+                    <p class="w-100 h-100 overflow-hidden">
+                      <img src="assets/images/img/50581.jpg" alt="Petroleum" class="w-100 h-100 object-fit-cover group-hover-item-scale-12 tw-duration-300">
+                    </p>
+                    <h5 class="tw-mt-4">
+                      <span class="hover-text-main-600 line-clamp-1 tw-mb-3">Petroleum Products</span>
+                    </h5>
+                    <p class="text-neutral-600 tw-mb-6">Direct transactions with refineries and verified sellers:</p>
+                    <ul class="list-styled text-neutral-600">
+                      <li>EN590 (10 ppm Diesel)</li>
+                      <li>Jet A-1</li>
+                      <li>D6 Fuel Oil</li>
+                      <li>ULSD, Bitumen, LPG</li>
+                    </ul>
+                  </div>
+                </div>
+                                                <div class="col-sm-4" data-aos="fade-up" data-aos-duration="400">
+                  <div class="group-item">
+                    <p class="w-100 h-100 overflow-hidden">
+                      <img src="assets/images/img/aviation.jpg" alt="Aviation Services" class="w-100 h-100 object-fit-cover group-hover-item-scale-12 tw-duration-300" loading="lazy">
+                    </p>
+                    <h5 class="tw-mt-4">
+                      <span class="hover-text-main-600 line-clamp-1 tw-mb-3">Aviation Services</span>
+                    </h5>
+                    <p class="text-neutral-600 tw-mb-6">Certified parts &amp; pre-owned aviation assets:</p>
+                    <ul class="list-styled text-neutral-600">
+                      <li>Aircraft Spare Parts (EASA / FAA certified)</li>
+                      <li>Pre-Owned Helicopters</li>
+                      <li>Pre-Owned Private Jets</li>
+                    </ul>
+                  </div>
+                </div>
+
+              <div class="text-center tw-mt-8">
+                <div class="bg-white tw-p-8 tw-rounded-xl common-shadow-four">
+                  <p class="text-main-two-600 fw-semibold mb-0">
+                    All deals are supported by documentary proof, KYC-compliant procedures, and secure trade mechanisms (FOB, CIF, TTO).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ══════════════════════════════════════════════
+           SECTION 4 – FINANCIAL INTERMEDIATION (existing)
+           ══════════════════════════════════════════════ -->
+      <section id="financial" class="py-140 drag-rotate-element-section mt-5">
+        <div class="container">
+          <div class="tw-rounded-50-px gradient-bg-one tw-px-36-px tw-pt-9">
+            <div class="row gy-4">
+              <div class="col-lg-6">
+                <div class="tw-pe-12 position-relative d-flex flex-column justify-content-center h-100">
+                                    <div class="row g-2">
+                    <div class="col-sm-6" data-aos="fade-up" data-aos-duration="600">
+                      <div class="fin-card bg-main-600">
+                        <div class="fin-card-icon"><i class="ph ph-shield-check"></i></div>
+                        <h5 class="text-white fw-bold">Secure</h5>
+                        <p class="text-white">Institutional-level security protocols</p>
+                      </div>
+                    </div>
+                    <div class="col-sm-6" data-aos="fade-up" data-aos-duration="700">
+                      <div class="fin-card bg-main-two-600">
+                        <div class="fin-card-icon"><i class="ph ph-bank"></i></div>
+                        <h5 class="text-white fw-bold">Tier-1 Banking</h5>
+                        <p class="text-white">Europe, UAE, Asia</p>
+                      </div>
+                    </div>
+                    <div class="col-sm-6" data-aos="fade-up" data-aos-duration="800">
+                      <div class="fin-card bg-main-two-600">
+                        <div class="fin-card-icon"><i class="ph ph-currency-circle-dollar"></i></div>
+                        <h5 class="text-white fw-bold">Multi-Currency</h5>
+                        <p class="text-white">Operations with global reach</p>
+                      </div>
+                    </div>
+                    <div class="col-sm-6" data-aos="fade-up" data-aos-duration="900">
+                      <div class="fin-card bg-main-600">
+                        <div class="fin-card-icon"><i class="ph ph-arrows-left-right"></i></div>
+                        <h5 class="text-white fw-bold">Operations</h5>
+                        <div class="d-flex flex-column align-items-center gap-2 w-100 mt-1">
+                          <span class="drag-rotate-element fin-pill">Paymaster Services</span>
+                          <span class="drag-rotate-element fin-pill fin-pill-gold">Crypto–FIAT</span>
+                          <span class="drag-rotate-element fin-pill">Bank Swaps</span>
+                          <span class="drag-rotate-element fin-pill">SWIFT Transfers</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="common-shadow-three tw-rounded-40-px bg-white tw-ps-56-px tw-pe-6 tw-py-84-px">
+                  <div class="tw-mb-14">
+                    <span class="tw-py-1 tw-px-705 bg-main-50 text-main-600 tw-text-sm fw-bold text-capitalize rounded-pill tw-mb-205">
+                      Financial Intermediation
+                    </span>
+                    <h3 class="splitTextStyleOne fw-light tw-leading-104">
+                      <span class="d-inline-block fw-semibold">Financial Services</span>
+                      <span class="d-inline-block">for Institutional Clients</span>
+                    </h3>
+                  </div>
+                  <div class="d-flex flex-column tw-gap-10">
+                    <div class="d-flex align-items-start tw-gap-26-px animation-item" data-aos="fade-up" data-aos-duration="600">
+                      <span class="tw-w-14 d-flex justify-content-center align-items-center">
+                        <i class="ph ph-handshake tw-text-3xl text-main-600"></i>
+                      </span>
+                      <div>
+                        <h6 class="tw-mb-4">Paymaster Services</h6>
+                        <p class="text-neutral-500 max-w-400-px">
+                          Institutional-level Paymaster services through secure escrow or notary channels for large commission distribution, intermediary protection, and legal disbursement structures.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-start tw-gap-26-px animation-item" data-aos="fade-up" data-aos-duration="600">
+                      <span class="tw-w-14 d-flex justify-content-center align-items-center">
+                        <i class="ph ph-currency-btc tw-text-3xl text-main-600"></i>
+                      </span>
+                      <div>
+                        <h6 class="tw-mb-4">Crypto–FIAT Conversion</h6>
+                        <p class="text-neutral-500 max-w-400-px">
+                          For KYC/KYB-approved counterparties, we facilitate OTC crypto–FIAT conversions and crypto–crypto SWAPs through secure protocols.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-start tw-gap-26-px animation-item" data-aos="fade-up" data-aos-duration="600">
+                      <span class="tw-w-14 d-flex justify-content-center align-items-center">
+                        <i class="ph ph-bank tw-text-3xl text-main-600"></i>
+                      </span>
+                      <div>
+                        <h6 class="tw-mb-4">Bank Swaps &amp; SWIFT Transfers</h6>
+                        <p class="text-neutral-500 max-w-400-px">
+                          FIAT–FIAT SWIFT-based transfers and operations with Tier-1 banking partners across Europe, UAE, and Asia markets.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════
+           COMPLIANCE SECTION
+           ══════════════════════════════════════════════ -->
+      <section class="py-120">
+        <div class="container">
+          <div class="text-center tw-mb-15">
+            <span class="tw-py-1 tw-px-705 bg-main-600 text-white tw-text-sm fw-bold text-capitalize rounded-pill tw-mb-205">
+              Compliance &amp; Transparency
+            </span>
+            <h3 class="splitTextStyleOne fw-light tw-leading-104 tw-mb-6">
+              <span class="d-inline-block fw-semibold">Our Commitment to</span>
+              <span class="d-inline-block">Compliance &amp; Transparency</span>
+            </h3>
+            <p class="text-neutral-500 max-w-500-px mx-auto">
+              Across all service lines — from aircraft transactions to commodity trades — we adhere
+              to international compliance standards ensuring secure, transparent operations.
+            </p>
+          </div>
+
+          <div class="row gy-4">
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="600">
+              <div class="compliance-item">
+                <div class="compliance-icon"><i class="ph ph-shield-check"></i></div>
+                <h5 class="fw-semibold tw-mb-5 text-main-two-600">KYC / KYB Compliance</h5>
+                <p class="text-neutral-600">Full verification of all counterparties ensuring complete transparency and legal compliance in every transaction.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800">
+              <div class="compliance-item">
+                <div class="compliance-icon">
+                  <img src="assets/images/icons/roadmap-icon7.svg" alt="AML" class="animate__swing" />
+                </div>
+                <h5 class="fw-semibold tw-mb-5 text-main-two-600">AML / CFT Due Diligence</h5>
+                <p class="text-neutral-600">Comprehensive AML/CFT due diligence in line with EU regulations — applied to both aviation and commodity transactions.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1000">
+              <div class="compliance-item">
+                <div class="compliance-icon"><i class="ph ph-globe"></i></div>
+                <h5 class="fw-semibold tw-mb-5 text-main-two-600">Legal &amp; Regulatory Support</h5>
+                <p class="text-neutral-600">Cross-border legal support including aircraft title searches, export licences, sanctions screening, and international trade law.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════
+           CONTACT STRIP
+           ══════════════════════════════════════════════ -->
+      <section class="show-case py-120 bg-main-two-600 overflow-hidden">
+        <div class="max-w-602-px mx-auto text-center">
+          <span class="tw-py-1 tw-px-705 bg-white-13 text-white tw-text-sm fw-medium text-capitalize rounded-pill tw-mb-205">
+            Get in Touch
+          </span>
+          <h3 class="fw-light tw-leading-104 tw-mb-9 text-white">
+            <span class="splitTextStyleOne d-inline-block fw-medium">
+              <span class="fw-semibold">Ready to discuss</span>
+              <span> your </span>
+              <span class="fw-semibold">requirements?</span>
+            </span>
+          </h3>
+          <p class="text-white opacity-90 mb-4">
+            Whether you need aircraft parts, are looking to acquire a helicopter or private jet,
+            or want to discuss commodity trades — our team is available for a confidential consultation.
+          </p>
+          <div class="d-inline-flex flex-wrap gap-3 justify-content-center">
+            <a href="contact.html" class="btn btn-light fw-bold rounded-pill tw-px-10 tw-py-505" style="color: #1f2b69;">
+              Contact Us Now
+            </a>
+            <a href="tel:+37120682842" class="btn btn-outline-light fw-bold rounded-pill tw-px-10 tw-py-505">
+              📞 +371 206 828 42
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════
+           FOOTER
+           ══════════════════════════════════════════════ -->
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 mb-4">
+              <div class="footer-company-info">
+                <div class="hexagon-container">
+                  <img src="assets/images/img/logo.png" alt="Logo" class="max-w-200-px" style="height: 80px; background-color: #eee;" />
+                </div>
+                <h5>Advensys International Trading SIA</h5>
+                <p class="footer-description">
+                  International trading company providing commodity brokerage, aviation services,
+                  financial intermediation, and compliance services backed by the expertise of
+                  Groupe Advensys Luxembourg SA.
+                </p>
+                <div class="contact-info">
+                  <div class="contact-item">
+                    <svg class="contact-icon" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                    </svg>
+                    <span style="color: white;">+371 206 828 42</span>
+                  </div>
+                  <div class="contact-item">
+                    <svg class="contact-icon" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                      <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                    </svg>
+                    <span style="color: white;">contact@advensys-trading.lv</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-2 col-md-6 mb-4">
+              <div class="footer-section">
+                <h6>Services</h6>
+                <ul class="footer-links">
+                  <li><a href="aviation.html" class="text-white">Aircraft Spare Parts</a></li>
+                  <li><a href="aviation.html" class="text-white">Pre-Owned Aircraft</a></li>
+                  <li><a href="commodities.html" class="text-white">Commodities Brokerage</a></li>
+                  <li><a href="commodities.html" class="text-white">Financial Intermediation</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-2 col-md-6 mb-4">
+              <div class="footer-section">
+                <h6>About</h6>
+                <ul class="footer-links">
+                  <li><a href="about.html" class="text-white">About Us</a></li>
+                  <li><a href="about.html" class="text-white">Groupe Advensys</a></li>
+                  <li><a href="about.html" class="text-white">Leadership</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-2 col-md-6 mb-4">
+              <div class="footer-section">
+                <h6>Support</h6>
+                <ul class="footer-links">
+                  <li><a href="contact.html" class="text-white">Get in Touch</a></li>
+                  <li><a href="contact.html" class="text-white">Free Consultation</a></li>
+                  <li><a href="contact.html" class="text-white">Partnership Inquiries</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <div class="row align-items-center">
+              <div class="col-md-8">
+                <p class="copyright-text">
+                  © 2025 Advensys International Trading SIA – A subsidiary of Groupe Advensys Luxembourg SA<br>
+                  <small>Registered in Latvia – Reg. No. 40203531724</small>
+                </p>
+              </div>
+              <div class="col-md-4">
+                <div class="social-links">
+                  <a href="https://www.linkedin.com/company/advensys-international-trading/" class="social-link" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                      <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                    </svg>
+                  </a>
+                  <a href="mailto:contact@advensys-trading.lv" class="social-link" title="Email">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                      <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                    </svg>
+                  </a>
+                  <a href="tel:+37120682842" class="social-link" title="Phone">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                      <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122L9.98 10.8a.678.678 0 0 1-.725-.247 7.968 7.968 0 0 1-2.46-2.46.678.678 0 0 1-.247-.725l.4-1.805a.678.678 0 0 0-.122-.58L3.654 1.328z"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-12">
+                <div class="legal-links">
+                  <a href="#privacy">Privacy Policy</a>
+                  <span style="color: var(--neutral-400);">|</span>
+                  <a href="#cookies">Cookies</a>
+                  <span style="color: var(--neutral-400);">|</span>
+                  <a href="#impressum">Impressum (coming soon)</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div><!-- #smooth-content -->
+  </div><!-- #smooth-wrapper -->
+
+  <!-- Bootstrap 5.3.3 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Jquery -->
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
+  <!-- Phosphor Icons -->
+  <script src="assets/js/phosphor-icon.js"></script>
+  <!-- GSAP -->
+  <script src="assets/js/gsap.min.js"></script>
+  <script src="assets/js/ScrollTrigger.min.js"></script>
+  <script src="assets/js/ScrollSmoother.min.js"></script>
+  <script src="assets/js/SplitText.min.js"></script>
+  <script src="assets/js/custom-gsap.js"></script>
+  <!-- AOS -->
+  <script src="assets/js/aos.js"></script>
+  <!-- Counter -->
+  <script src="assets/js/counterup.min.js"></script>
+  <!-- Swiper -->
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <!-- Marquee -->
+  <script src="assets/js/jquery.marquee.min.js"></script>
+  <!-- Magnific -->
+  <script src="assets/js/magnific-popup.min.js"></script>
+  <!-- Main -->
+  <script src="assets/js/main.js"></script>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const openMobileMenuBtn = document.getElementById("openMobileMenu");
+    const closeMobileMenuBtn = document.getElementById("closeMobileMenu");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const mobileOverlay = document.getElementById("mobileOverlay");
+    const body = document.body;
+    let isMobileMenuOpen = false;
+    let isNavigatingViaLink = false;
+
+    function openMobileMenu() {
+      if (isMobileMenuOpen) return;
+      isMobileMenuOpen = true;
+      mobileMenu.classList.add("active");
+      mobileOverlay.classList.add("active");
+      body.style.overflow = "hidden";
+      body.style.position = "fixed";
+      body.style.width = "100%";
+      closeMobileMenuBtn.focus();
+    }
+
+    function closeMobileMenu() {
+      if (!isMobileMenuOpen) return;
+      isMobileMenuOpen = false;
+      mobileMenu.classList.remove("active");
+      mobileOverlay.classList.remove("active");
+      body.style.overflow = "";
+      body.style.position = "";
+      body.style.width = "";
+      openMobileMenuBtn.focus();
+    }
+
+    if (openMobileMenuBtn) openMobileMenuBtn.addEventListener("click", function(e) { e.preventDefault(); e.stopPropagation(); openMobileMenu(); });
+    if (closeMobileMenuBtn) closeMobileMenuBtn.addEventListener("click", function(e) { e.preventDefault(); e.stopPropagation(); closeMobileMenu(); });
+    if (mobileOverlay) mobileOverlay.addEventListener("click", function(e) { e.preventDefault(); closeMobileMenu(); });
+
+    document.querySelectorAll("#mobileMenu .nav-menu a").forEach(link => {
+      link.addEventListener("click", function(e) {
+        e.preventDefault();
+        const targetUrl = this.getAttribute("href");
+        isNavigatingViaLink = true;
+        setTimeout(() => { closeMobileMenu(); setTimeout(() => { window.location.href = targetUrl; }, 150); }, 50);
+      });
+    });
+
+    document.addEventListener("keydown", function(e) { if (e.key === "Escape" && isMobileMenuOpen) closeMobileMenu(); });
+    window.addEventListener("resize", function() { if (window.innerWidth > 992 && isMobileMenuOpen) closeMobileMenu(); });
+
+    window.addEventListener("load", function() {
+      const preloader = document.querySelector(".preloader");
+      if (preloader) { preloader.style.opacity = "0"; setTimeout(() => { preloader.style.display = "none"; }, 300); }
+    });
+
+    window.addEventListener("pageshow", function() { if (isMobileMenuOpen) closeMobileMenu(); });
+  });
+  </script>
+</body>
+</html>

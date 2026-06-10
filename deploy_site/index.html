@@ -1,0 +1,1539 @@
+<!DOCTYPE html>
+<html lang="en" class="home-one">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Advensys International Trading SIA">
+    <meta name="keywords" content="Advensys International Trading SIA">
+    <meta name="robots" content="INDEX,FOLLOW">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>Advensys International Trading SIA</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/img/logo.png" />
+    
+    <!-- Bootstrap 5.3.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- AOS -->
+    <link rel="stylesheet" href="assets/css/aos.css" />
+    <!-- Swiper -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <!-- Magnific -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+    <!-- Satoshi -->
+    <link rel="stylesheet" href="assets/css/satoshi.css" />
+    <!-- Main css -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    
+    <style>
+      /* Video Modal Styles */
+      .video-modal {
+        z-index: 9999 !important;
+      }
+      
+      .video-modal .modal-dialog {
+        max-width: 90vw;
+        width: 90vw;
+        z-index: 10000;
+      }
+      
+      .video-modal .modal-content {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+      }
+      
+      .video-modal .modal-body {
+        padding: 0;
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+        overflow: hidden;
+      }
+      
+      .video-modal iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+        border-radius: 8px;
+      }
+      
+      .video-modal .btn-close {
+        position: absolute;
+        top: -40px;
+        right: 0;
+        z-index: 10050;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0.8;
+        transition: all 0.3s ease;
+        border: none;
+      }
+      
+      .video-modal .btn-close:hover {
+        opacity: 1;
+        transform: scale(1.1);
+        background: rgba(255, 255, 255, 1);
+      }
+      
+      /* Video Button Styles */
+      .btn-video {
+        background: linear-gradient(135deg, #C9A84C, #A8871E);
+        color: white !important;
+        border: none;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+      }
+
+      .btn-video:hover {
+        background: linear-gradient(135deg, #A8871E, #8a6d15);
+        color: white !important;
+        transform: translateY(-2px);
+      }
+
+      .btn-video .button__flair::before {
+        background: linear-gradient(135deg, #C9A84C, #A8871E);
+      }
+
+      /* Play icon for the button */
+      .btn-video::before {
+        content: "▶";
+        margin-right: 0.5rem;
+        font-size: 0.9rem;
+      }
+
+      /* Mobile Menu Styles */
+      .mobile-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: 100vh;
+        background: white;
+        z-index: 9998;
+        transition: right 0.3s ease;
+        padding: 2rem;
+        box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+      }
+      
+      .mobile-menu.active {
+        right: 0;
+      }
+      
+      .mobile-menu .nav-menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      .mobile-menu .nav-menu li {
+        margin-bottom: 1rem;
+      }
+      
+      .mobile-menu .nav-menu a {
+        display: block;
+        padding: 0.75rem 0;
+        text-decoration: none;
+        color: #333;
+        font-weight: 600;
+        border-bottom: 1px solid #eee;
+      }
+      
+      .mobile-menu .mobile-menu-close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+      /* Overlay for mobile menu */
+      .mobile-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        z-index: 9997;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+      }
+      
+      .mobile-overlay.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      
+      @media (max-width: 768px) {
+        .video-modal .modal-dialog {
+          max-width: 95vw;
+          width: 95vw;
+          margin: 1rem auto;
+        }
+        
+        .video-modal .btn-close {
+          top: -35px;
+          width: 35px;
+          height: 35px;
+        }
+      }
+
+      /* Footer Styles */
+      .footer {
+        background: linear-gradient(135deg, #0A2040, #0D2B5E);
+        color: white;
+        padding: 3rem 0 1rem;
+        margin-top: 3rem;
+      }
+
+      .footer h5, .footer h6 {
+        color: white;
+        margin-bottom: 1rem;
+      }
+
+      .footer p {
+        color: rgba(255,255,255,0.8);
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .footer-links li {
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-links p {
+        color: rgba(255,255,255,0.92);
+        cursor: pointer;
+        transition: color 0.3s ease;
+      }
+
+      .footer-links p:hover {
+        color: white;
+      }
+
+      .contact-info {
+        margin-top: 1rem;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+      }
+
+      .contact-icon {
+        width: 16px;
+        height: 16px;
+        margin-right: 0.5rem;
+        color: #C9A84C;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid rgba(255,255,255,0.2);
+        margin-top: 2rem;
+        padding-top: 1rem;
+      }
+
+      .copyright-text {
+        color: rgba(255,255,255,0.92);
+        font-size: 0.9rem;
+        margin: 0;
+      }
+
+      .social-links {
+        display: flex;
+        justify-content: flex-end;
+        gap: 1rem;
+      }
+
+      .social-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 35px;
+        height: 35px;
+        background: rgba(255,255,255,0.1);
+        border-radius: 50%;
+        color: white;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .social-link:hover {
+        background: #C9A84C;
+        color: white;
+        transform: translateY(-2px);
+      }
+
+      .legal-links {
+        text-align: center;
+      }
+
+      .legal-links a {
+        color: rgba(255,255,255,0.92);
+        text-decoration: none;
+        margin: 0 0.5rem;
+        font-size: 0.85rem;
+      }
+
+      .legal-links a:hover {
+        color: white;
+        text-decoration: underline;
+      }
+
+      /* Compliance Section Styles */
+      .compliance-item {
+        text-align: center;
+        padding: 2rem;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        height: 100%;
+        transition: transform 0.3s ease;
+      }
+
+      .compliance-item:hover {
+        transform: translateY(-5px);
+      }
+
+      .compliance-icon {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 1.5rem;
+        background: linear-gradient(135deg, #1A3D7A, #0d2860);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 2rem;
+      }
+
+      .compliance-icon img {
+        width: 40px;
+        height: 40px;
+        filter: brightness(0) invert(1);
+      }
+    </style>
+  </head>
+  <body>
+ <!--==================== Preloader Start ====================-->
+    <div class="preloader">
+      <div class="cssload-loading"><i></i><i></i><i></i><i></i></div>
+    </div>
+    <!--==================== Preloader End ====================-->
+
+    <!--==================== Overlay Start ====================-->
+    <div class="overlay"></div>
+    <!--==================== Overlay End ====================-->
+
+    <!--==================== Mobile Overlay ====================-->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!--==================== Sidebar Overlay End ====================-->
+    <div class="side-overlay"></div>
+    <!--==================== Sidebar Overlay End ====================-->
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="mobile-menu-close" id="closeMobileMenu">&times;</button>
+      <div class="mobile-menu-header">
+        <img
+        src="assets/images/img/logo.png"
+        alt="Logo"
+        class="max-w-200-px"
+        style="height: 80px;"
+      />
+      </div>
+      <ul class="nav-menu mt-4">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="aviation.html" class="mobile-sub-link">Aviation</a></li>
+        <li><a href="commodities.html" class="mobile-sub-link">Commodities</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="mt-4">
+        <div class="contact-item">
+          <svg class="contact-icon" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+          </svg>
+          <span>+44 7873 814045</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Custom Toast Message start -->
+    <div id="toast-container"></div>
+    <!-- Custom Toast Message End -->
+
+    <!-- ==================== Scroll to Top End Here ==================== -->
+    <div class="progress-wrap">
+      <svg
+        class="progress-circle svg-content"
+        width="100%"
+        height="100%"
+        viewBox="-1 -1 102 102"
+      >
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
+    </div>
+    <!-- ==================== Scroll to Top End Here ==================== -->
+
+    <!-- Custom Cursor Start -->
+    <div class="cursor"></div>
+    <span class="dot"></span>
+    <!-- Custom Cursor End -->
+    <div id="smooth-wrapper">
+      <!-- ========================== Top Header Start ============================== -->
+      <div class="bg-main-600 tw-py-205 d-sm-block d-none">
+        <div class="container">
+          <div class="d-flex justify-content-center">
+            <p
+              class="text-white bg-white-13 d-inline-block tw-py-1 tw-px-5 rounded-pill fw-normal"
+            >
+            📞 Ready to Trade? Contact us at +371 206 828 42 for verified commodity sourcing
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- ========================== Top Header End ============================== -->
+
+      <!-- ==================== Header Start Here ==================== -->
+      <header class="header bg-white transition-all">
+        <div class="container container-two">
+          <nav class="d-flex align-items-center justify-content-between">
+            <!-- Logo Start -->
+            <div class="logo">
+              <a
+                href="index.html"
+                class="link hover--translate-y-1 active--translate-y-scale-9"
+              >
+              <img
+              src="assets/images/img/logo.png"
+              alt="Logo"
+              class="max-w-200-px"
+              style="height: 80px;"
+            />
+              </a>
+            </div>
+            <!-- Logo End  -->
+
+            <!-- Menu Start  -->
+            <div class="header-menu d-lg-block d-none">
+              <!-- Nav menu Start -->
+              <ul class="nav-menu d-lg-flex align-items-center tw-gap-14">
+                <li class="nav-menu__item">
+                  <a
+                    href="index.html"
+                    class="nav-menu__link hover--translate-y-1 text-heading tw-py-9 fw-semibold w-100"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-menu__item">
+                  <a
+                    href="about.html"
+                    class="nav-menu__link hover--translate-y-1 text-heading tw-py-9 fw-semibold w-100"
+                    >About</a
+                  >
+                </li>
+                <li class="nav-menu__item nav-dropdown">
+                  <a
+                    href="javascript:void(0)"
+                    class="nav-menu__link hover--translate-y-1 text-heading tw-py-9 fw-semibold w-100 d-inline-flex align-items-center gap-1"
+                    >Services <i class="ph ph-caret-down" style="font-size:0.7rem;margin-top:2px;"></i></a
+                  >
+                  <ul class="nav-dropdown-menu">
+                    <span class="dropdown-header">Our Services</span>
+                    <li><a href="aviation.html">Aviation</a></li>
+                    <li><a href="commodities.html">Commodities</a></li>
+                  </ul>
+                </li>
+                <li class="nav-menu__item">
+                  <a
+                    href="contact.html"
+                    class="nav-menu__link hover--translate-y-1 text-heading tw-py-9 fw-semibold w-100"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+              <!-- Nav menu End  -->
+            </div>
+            <!-- Menu End  -->
+
+            <!-- Header Right start -->
+            <div class="d-flex align-items-center tw-gap-6">
+              <p
+              
+                class="hover--translate-y-1 active--translate-y-scale-9 d-sm-inline-flex d-none align-items-center justify-content-center tw-gap-5 group active--translate-y-2 tw-px-9 rounded-pill tw-py-4 fw-semibold"
+                data-block="button"
+              >
+                <img
+                  src="assets/images/icons/contact-icon2.svg"
+                  alt="Icon"
+                  style="height: 30px"
+                />
+                <span class="button__label">+371 206 828 42</span>
+              </p>
+              <button
+                type="button"
+                class="toggle-mobileMenu leading-none d-lg-none text-neutral-800 tw-text-9"
+                id="openMobileMenu"
+              >
+                <i class="ph ph-list"></i>
+              </button>
+            </div>
+            <!-- Header Right End  -->
+          </nav>
+        </div>
+      </header>
+      <!-- ==================== Header End Here ==================== -->
+
+      <div id="smooth-content">
+        <!-- ============================= Banner Section Start ============================== -->
+        <section
+          class="banner tw-py-80-px overflow-hidden section-bg-three position-relative"
+        >
+          <div class="container max-w-1400-px">
+            <div class="row gy-4 align-items-center">
+              <div class="position-relative">
+                <div class="container">
+                  <div class="text-center">
+                    <span class="text-capitalize font-caveat fw-bold tw-mb-6 h3"
+                      >Advensys International Trading SIA</span>
+                    <div class="">
+                      <div class="position-relative d-inline-block">
+                        <h1
+                          class="splitTextStyleOne text-capitalize fw-bold tw-leading-none tw-pb-205"
+                        >
+                          Trade Without Borders
+                        </h1>
+                        <div class="text-end svg-line d-sm-block d-none">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="889" height="18" viewBox="0 0 489 18" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M207.684 1.72387C184.71 2.31462 162.007 3.04101 139.867 3.83514C108.526 4.95854 77.1964 6.12068 46.056 7.96073C36.2537 8.5418 26.2994 8.90979 16.5584 9.63613C10.4436 10.0913 2.33552 10.7401 1.27144 10.8757C0.714878 10.9531 0.472071 11.0695 0.393613 11.1082C-0.158042 11.3794 -0.0573853 11.6407 0.253993 11.8441C0.379035 11.9313 0.695229 12.1444 1.57297 12.1735C60.274 14.1588 120.299 10.285 179.071 9.87824C280.993 9.18096 386.003 11.9507 487.115 17.9938C487.998 18.0423 488.856 17.8001 488.979 17.4418C489.126 17.0931 488.489 16.7542 487.606 16.7057C386.322 10.6529 281.14 7.87347 179.022 8.58044C124.249 8.95813 68.3944 12.3575 13.5451 11.1953C14.8053 11.0985 16.0411 11.0016 17.1689 10.9144C26.8707 10.1881 36.7833 9.8298 46.5464 9.24873C77.6205 7.40868 108.886 6.24654 140.186 5.13282C179.022 3.73826 219.55 2.53737 260.397 1.97567C275.01 2.06283 289.574 2.15003 304.137 2.25656C335.643 2.48899 367.296 3.16691 398.728 4.07725C408.192 4.3581 417.656 4.64861 427.12 4.9004C430.258 4.98757 438.349 5.23932 439.477 5.21995C440.875 5.20058 441.144 4.73577 441.169 4.65829C441.242 4.48397 441.193 4.24185 440.507 4.03847C440.433 4.00942 439.992 3.91251 439.011 3.85441C381.86 0.426099 320.834 -0.145196 260.446 0.677985C196.749 0.319659 132.806 0.164636 69.2697 0C68.3601 0 67.6172 0.290577 67.6098 0.648903C67.6049 1.00723 68.338 1.29782 69.2476 1.3075C115.253 1.42371 161.492 1.53986 207.684 1.72387Z" fill="#C9A84C" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Key service badges -->
+                    <div class="d-flex flex-wrap justify-content-center gap-2 tw-mt-6 mb-4" data-aos="fade-up" data-aos-duration="600">
+                      <span class="home-badge"><i class="ph ph-airplane"></i> Aviation</span>
+                      <span class="home-badge"><i class="ph ph-gas-pump"></i> Commodities</span>
+                      <span class="home-badge"><i class="ph ph-bank"></i> Financial Intermediation</span>
+                      <span class="home-badge"><i class="ph ph-shield-check"></i> KYC / AML Compliant</span>
+                    </div>
+
+                    <p class="splitTextStyleOne tw-text-lg max-w-620-px mx-auto fw-medium" style="color: #1e2d4a;">
+                      Advensys International Trading SIA connects verified buyers and sellers worldwide, delivering
+                      secure, compliant intermediation across petroleum products, metals, agricultural commodities,
+                      aircraft spare parts, and institutional financial operations.
+                    </p>
+
+                    <style>
+                      .home-badge {
+                        display: inline-flex; align-items: center; gap: 0.4rem;
+                        padding: 0.4rem 1rem; border-radius: 50px;
+                        background: rgba(26,61,122,0.08);
+                        border: 1.5px solid rgba(26,61,122,0.18);
+                        font-size: 0.85rem; font-weight: 600;
+                        color: #1A3D7A;
+                      }
+                      .home-badge i { color: #C9A84C; }
+                    </style>
+
+                    <div
+                      class="d-inline-flex align-items-center tw-gap-5 tw-mt-3 flex-wrap"
+                      data-aos="fade-up"
+                      data-aos-anchor-placement="top-bottom"
+                      data-aos-duration="800"
+                    >
+                      <a
+                        href="about.html"
+                        class="flex-grow-1 hover--translate-y-1 active--translate-y-scale-9 btn btn-main-two hover-style-two button--stroke align-items-center justify-content-center tw-gap-5 group active--translate-y-2 tw-px-10 rounded-pill tw-py-505 fw-bold"
+                        data-block="button"
+                      >
+                        <span class="button__flair"></span>
+                        <span class="button__label">Learn More</span>
+                      </a>
+                      <a
+                        href="contact.html"
+                        class="flex-grow-1 hover--translate-y-1 active--translate-y-scale-9 btn btn-orange-outline hover-style-five hover-text-white button--stroke align-items-center justify-content-center tw-gap-5 group active--translate-y-2 tw-px-10 rounded-pill tw-py-505 fw-bold bg-white"
+                        data-block="button"
+                      >
+                        <span class="button__flair"></span>
+                        <span class="button__label">Contact Us</span>
+                      </a>
+
+                      <!-- VIDEO BUTTON - FIXED -->
+                      <button type="button" class="flex-grow-1 hover--translate-y-1 active--translate-y-scale-9 btn btn-video hover-style-two button--stroke align-items-center justify-content-center tw-gap-5 group active--translate-y-2 tw-px-10 rounded-pill tw-py-505 fw-bold" id="openVideoModal" data-block="button">
+                        <span class="button__flair"></span>
+                        <span class="button__label">Watch Forbes Interview</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ============================= Banner Section End ============================== -->
+
+        <!-- =============================== Choose Us section start ============================ -->
+        <section class="py-120 overflow-hidden">
+          <div class="container">
+            <div class="row gy-1 gx-2 align-items-center min-vh-40">
+              <div class="col-lg-6 d-sm-block d-none">
+                <div
+                  class="tw-ps-8 position-relative z-1 overflow-hidden "
+                  id="box-wrapper"
+                >
+                  <img
+                    src="assets/images/img/service-img-6.png"
+                    alt="Image"
+                    class="w-100 h-100 object-fit-cover tw-rounded-3xl"
+                    loading="lazy"
+                  />
+
+                  <div
+                    class=" max-w-150-px tw-h-150-px w-100 d-flex justify-content-center align-items-center tw-rounded-xl common-shadow-four box position-absolute tw-start-0 top-0 tw-mt-705 z-1"
+                  >
+                    <img
+                      src="assets/images/img/service-img-1-.png"
+                      alt=""
+                    />
+                  </div>
+                  <div
+                    class=" max-w-150-px tw-h-150-px w-100 d-flex justify-content-center align-items-center tw-rounded-xl common-shadow-four box position-absolute tw-end-0 top-0 tw-mt-705 z-1 tw-me-14"
+                  >
+                    <img
+                    src="assets/images/img/service-img-2-.png"
+                      alt=""
+                    />
+                  </div>
+                  <div
+                    class=" max-w-150-px tw-h-150-px w-100 d-flex justify-content-center align-items-center tw-rounded-xl common-shadow-four box position-absolute tw-start-0 top-0 z-1 tw-mt-194-px tw-ms-148-px"
+                  >
+                    <img
+                    src="assets/images/img/service-img-4.png"
+                      alt=""
+                    />
+                  </div>
+                  <div
+                    class=" max-w-150-px tw-h-150-px w-100 d-flex justify-content-center align-items-center tw-rounded-xl common-shadow-four box position-absolute tw-end-0 bottom-0 tw-me-90-px z-1 tw-mb-148-px"
+                  >
+                    <img
+                    src="assets/images/img/service-img-5-.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="ps-lg-5">
+                  <span
+                    class="tw-py-1 tw-px-705 bg-main-600 text-white tw-text-sm fw-bold text-capitalize rounded-pill tw-mb-205"
+                    >Who We Are</span
+                  >
+                  <div class="max-w-682-px fs-5">
+                    <h4 class="tw-mb-2">Advensys International Trading SIA </h4>
+                    <p class="text-neutral-500">
+                      is a subsidiary of Groupe Advensys Luxembourg SA, <br/> a
+                      multi-sectoral group headquartered in Luxembourg <br/> and
+                      active since 2007. The group was founded by <span class="fw-semibold">Irvin DULBERG,</span> 
+                      <br/>a strategic entrepreneur recognized for his cross-border
+                      vision <br/>and operational rigor.
+                    </p>
+                 
+                  </div>
+
+                  <div
+                  class="d-flex align-items-center "
+                  data-aos="fade-up"
+                  data-aos-anchor-placement="top-bottom"
+                  data-aos-duration="600"
+                >
+                  
+                  <p class="text-main-two-600 fw-medium  fs-4">
+                    Group Activities Include:
+                  </p>
+                </div>
+
+                  <div class="tw-mt-4">
+                    <div class="row gy-4">
+                      <div
+                        class="col-6"
+                        data-aos="fade-up"
+                        data-aos-anchor-placement="top-bottom"
+                        data-aos-duration="600"
+                      >
+                        <div
+                          class="bg-neutral-50 tw-ps-705 tw-pe-4 tw-py-9 border border-neutral-50 hover-border-main-600 tw-rounded-lg tw-duration-300"
+                        >
+                          <h6 class="tw-mb-2">Insurance & Bank Brokerage </h6>
+                          <p class="text-neutral-500">
+                            Advensys Insurance Finance
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        class="col-6"
+                        data-aos="fade-up"
+                        data-aos-anchor-placement="top-bottom"
+                        data-aos-duration="600"
+                      >
+                        <div
+                          class="bg-neutral-50 tw-ps-705 tw-pe-4 tw-py-9 border border-neutral-50 hover-border-main-600 tw-rounded-lg tw-duration-300"
+                        >
+                          <h6 class="tw-mb-2">International Trading</h6>
+                          <p class="text-neutral-500">
+                            Advensys International Trading SIA
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="text-neutral-500">
+                    The group operates across Luxembourg, Latvia, France, Sweden, and the United Kingdom.
+                  </p>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- =============================== Choose Us section end ============================== -->
+        
+        <div class="position-relative z-1">
+          <img src="assets/images/shapes/shape-image.png" alt="Shape" class="position-absolute w-100 tw-start-0 bottom-0 z-n1">
+          <!-- ===================================== Blog section start ============================== -->
+  <section class="blog">
+      <div class="container">
+          <div class="bg-white common-shadow-five py-120 tw-px-90-px">
+              <span class="line w-0 tw-h-2 bg-main-600 tw-mb-4"></span>
+              <div class="d-flex flex-column align-items-center justify-content-center tw-mb-12">
+                <span
+                class="tw-py-1 tw-px-705 bg-main-50 text-main-600 tw-text-sm fw-bold text-capitalize rounded-pill tw-mb-205"
+                >Commodities Brokerage</span
+              >
+              
+              <h6 class="">Our Core Expertise in Global Commodities</h6>
+              <p >We facilitate direct transactions with verified sellers and refineries across petroleum products, metals, and agricultural commodities through secure trade mechanisms</p>
+            </div>
+
+            
+            <!-- Blog items start -->
+            <div class="row gy-4">
+              <div class="col-sm-4" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="200" >
+                <div class="group-item">  
+                  <p  class="w-100 h-100 overflow-hidden">
+                    <img src="assets/images/img/50581.jpg" alt="Blog Image" class="w-100 h-100 object-fit-cover group-hover-item-scale-12 tw-duration-300" loading="lazy">
+                          </p>
+                          <h5 class="tw-mt-4">
+                            <span class="hover-text-main-600 line-clamp-1 tw-mb-3 ">Petroleum Products</span>
+                          </h5>
+                          <p class="text-neutral-600 tw-mb-6">Direct transactions with refineries and verified sellers:</p>
+                        <ul class="list-styled text-neutral-600">
+                            <li>EN590 (10 ppm Diesel)</li>
+                            <li>Jet A-1</li>
+                            <li>D6 Fuel Oil</li>
+                            <li>ULSD, Bitumen, LPG</li>
+                        </ul>
+                      </div>
+                  </div>
+                                                      <div class="col-sm-4" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="400" >
+                      <div class="group-item">  
+                          <p class="w-100 h-100 overflow-hidden">
+                            <img src="assets/images/img/aviation.jpg" alt="Aviation Services" class="w-100 h-100 object-fit-cover group-hover-item-scale-12 tw-duration-300" loading="lazy">
+                          </p>
+                          <h5 class="tw-mt-4">
+                            <span class="hover-text-main-600 line-clamp-1 tw-mb-3 ">Aviation Services</span>
+                          </h5>
+                          <p class="text-neutral-600 tw-mb-6">Certified parts &amp; pre-owned aviation assets:</p>
+                        <ul class="list-styled text-neutral-600">
+                            <li>Aircraft Spare Parts (EASA / FAA)</li>
+                            <li>Pre-Owned Helicopters</li>
+                            <li>Pre-Owned Private Jets</li>
+                        </ul>
+                      </div>
+                  </div>
+                  <div class="col-sm-4" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="600" >
+                      <div class="group-item">
+                          <p class="w-100 h-100 overflow-hidden">
+                              <img src="assets/images/img/3157.jpg" alt="Blog Image" class="w-100 h-100 object-fit-cover group-hover-item-scale-12 tw-duration-300" loading="lazy">
+                          </p>
+                          <h5 class="tw-mt-4">
+                            <span class="hover-text-main-600 line-clamp-1 tw-mb-3 ">Agricultural Products</span>
+                          </h5>
+                          <p class="text-neutral-600 tw-mb-6">Premium quality from verified origins:</p>
+                        <ul class="list-styled text-neutral-600 ps-2">
+                            <li>Cocoa beans (West Africa &amp; Latin America)</li>
+                            <li>Bananas (Fresh or Processed)</li>
+                            <li>Rice (Basmati, Thai, Long grain)</li>
+                            <li>Additional soft commodities upon request</li>
+                        </ul>
+                      </div>
+                  </div>
+              <!-- Blog items end -->
+              <div class="text-center tw-mt-8">
+                <div class="bg-white tw-p-8 tw-rounded-xl common-shadow-four">
+                    <p class="text-main-two-600 fw-semibold mb-0">
+                        All deals are supported by documentary proof, KYC-compliant procedures, and secure trade mechanisms (FOB, CIF, TTO).
+                    </p>
+                </div>
+            </div>
+          </div>
+      </div>
+  </section>
+  <!-- ===================================== Blog section End ============================== -->
+  
+  <!-- ============================ Cta section start ========================== -->
+  <section class="cta py-md-0 py-1">
+    <div class="container">
+      <div class="row gy-4 align-items-center justify-content-center">
+        <div class="col-md-6 d-md-block d-none">
+          <div class="ps-lg-5">
+            <div class="position-relative">
+              <img
+                src="assets/images/img/founder.png"
+                alt="Model"
+              />
+              <img
+                src="assets/images/shapes/arrow-right-curve.png"
+                alt="Arrow shape"
+                class="position-absolute top-0 tw-end-0 tw-mt-160-px animate__wobble__two"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="ps-lg-4 max-w-532-px">
+            <span
+              class="tw-py-1 tw-px-705 bg-main-600 text-white tw-text-sm fw-bold text-capitalize rounded-pill tw-mb-205"
+              >Founder Bio</span
+            >
+            <h3
+              class="splitTextStyleOne fw-light tw-leading-104 tw-mb-5 d-flex gap-2"
+            >
+              <span class="d-inline-block fw-semibold">
+                <span class="fw-normal">Irvin DULBERG</span>
+               
+              </span>
+            </h3>
+            <p class="text-neutral-600 tw-text-lg splitTextStyleOne">
+              is the Founder & CEO of Groupe Advensys. He was recently featured in Forbes for his insights on Luxembourg as a global launchpad for international ventures. 
+            </p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ============================ Cta section End ========================== -->
+
+        </div>
+
+        <!-- ========================== About section start ============================= -->
+        <section class="py-140 drag-rotate-element-section mt-5">
+          <div class="container">
+            <div class="tw-rounded-50-px gradient-bg-one tw-px-36-px tw-pt-9">
+              <div class="row gy-4">
+                <div class="col-lg-6">
+                  <div class="tw-pe-12 position-relative d-flex flex-column justify-content-center h-100">
+                      <div class="row g-2">
+                          <div class="col-sm-6" data-aos="fade-up" data-aos-duration="600">
+                            <div class="fin-card bg-main-600">
+                              <div class="fin-card-icon"><i class="ph ph-shield-check"></i></div>
+                              <h5 class="text-white fw-bold">Secure</h5>
+                              <p class="text-white">Institutional-level security protocols</p>
+                            </div>
+                          </div>
+                          <div class="col-sm-6" data-aos="fade-up" data-aos-duration="700">
+                            <div class="fin-card bg-main-two-600">
+                              <div class="fin-card-icon"><i class="ph ph-bank"></i></div>
+                              <h5 class="text-white fw-bold">Tier-1 Banking</h5>
+                              <p class="text-white">Europe, UAE, Asia</p>
+                            </div>
+                          </div>
+                          <div class="col-sm-6" data-aos="fade-up" data-aos-duration="800">
+                            <div class="fin-card bg-main-two-600">
+                              <div class="fin-card-icon"><i class="ph ph-currency-circle-dollar"></i></div>
+                              <h5 class="text-white fw-bold">Multi-Currency</h5>
+                              <p class="text-white">Operations with global reach</p>
+                            </div>
+                          </div>
+                          <div class="col-sm-6" data-aos="fade-up" data-aos-duration="900">
+                            <div class="fin-card bg-main-600">
+                              <div class="fin-card-icon"><i class="ph ph-arrows-left-right"></i></div>
+                              <h5 class="text-white fw-bold">Operations</h5>
+                              <div class="d-flex flex-column align-items-center gap-2 w-100 mt-1">
+                                <span class="drag-rotate-element fin-pill">Paymaster Services</span>
+                                <span class="drag-rotate-element fin-pill fin-pill-gold">Crypto–FIAT</span>
+                                <span class="drag-rotate-element fin-pill">Bank Swaps</span>
+                                <span class="drag-rotate-element fin-pill">SWIFT Transfers</span>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+                <div class="col-lg-6">
+                  <div class="common-shadow-three tw-rounded-40-px bg-white tw-ps-56-px tw-pe-6 tw-py-84-px">
+                      <div class="tw-mb-14">
+                          <span class="tw-py-1 tw-px-705 bg-main-50 text-main-600 tw-text-sm fw-bold text-capitalize rounded-pill tw-mb-205">
+                              Financial Intermediation
+                          </span>
+                          <h3 class="splitTextStyleOne fw-light tw-leading-104">
+                              <span class="d-inline-block fw-semibold">Financial Services</span>
+                              <span class="d-inline-block">for Institutional Clients</span>
+                          </h3>
+                      </div>
+                      <div class="d-flex flex-column tw-gap-10">
+                          <div class="d-flex align-items-start tw-gap-26-px animation-item" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="600">
+                              <span class="tw-w-14 d-flex justify-content-center align-items-center">
+                                  <i class="ph ph-handshake tw-text-3xl text-main-600"></i>
+                              </span>
+                              <div class="">
+                                  <h6 class="tw-mb-4">Paymaster Services</h6>
+                                  <p class="text-neutral-500 max-w-400-px">
+                                      Institutional-level Paymaster services through secure escrow or notary channels for large commission distribution, intermediary protection, and legal disbursement structures.
+                                  </p>
+                              </div>
+                          </div>
+                          <div class="d-flex align-items-start tw-gap-26-px animation-item" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="600">
+                              <span class="tw-w-14 d-flex justify-content-center align-items-center">
+                                  <i class="ph ph-currency-btc tw-text-3xl text-main-600"></i>
+                              </span>
+                              <div class="">
+                                  <h6 class="tw-mb-4">Crypto–FIAT Conversion</h6>
+                                  <p class="text-neutral-500 max-w-400-px">
+                                      For KYC/KYB-approved counterparties, we facilitate OTC crypto–FIAT conversions and crypto–crypto SWAPs through secure protocols.
+                                  </p>
+                              </div>
+                          </div>
+                          <div class="d-flex align-items-start tw-gap-26-px animation-item" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="600">
+                              <span class="tw-w-14 d-flex justify-content-center align-items-center">
+                                  <i class="ph ph-bank tw-text-3xl text-main-600"></i>
+                              </span>
+                              <div class="">
+                                  <h6 class="tw-mb-4">Bank Swaps & SWIFT Transfers</h6>
+                                  <p class="text-neutral-500 max-w-400-px">
+                                      FIAT–FIAT SWIFT-based transfers and operations with Tier-1 banking partners across Europe, UAE, and Asia markets.
+                                  </p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ========================== About section End ============================= -->
+
+        <!-- Compliance Section -->
+        <section class="py-120">
+          <div class="container">
+              <div class="text-center tw-mb-15">
+                  <span class="tw-py-1 tw-px-705 bg-main-600 text-white tw-text-sm fw-bold text-capitalize rounded-pill tw-mb-205">
+                      Compliance & Transparency
+                  </span>
+                  <h3 class="splitTextStyleOne fw-light tw-leading-104 tw-mb-6">
+                      <span class="d-inline-block fw-semibold">Our Commitment to</span>
+                      <span class="d-inline-block">Compliance & Transparency</span>
+                  </h3>
+                  <p class="text-neutral-500 max-w-500-px mx-auto">
+                      We adhere to international standards of compliance, ensuring secure and transparent operations backed by experienced professionals.
+                  </p>
+              </div>
+
+              <div class="row gy-4">
+                  <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="600">
+                      <div class="compliance-item">
+                          <div class="compliance-icon">
+                              <i class="ph ph-shield-check"></i>
+                          </div>
+                          <h5 class="fw-semibold tw-mb-5 text-main-two-600">KYC/KYB Compliance</h5>
+                          <p class="text-neutral-600">
+                              Full KYC/KYB verification of all parties ensuring complete transparency and legal compliance.
+                          </p>
+                      </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800">
+                      <div class="compliance-item">
+                          <div class="compliance-icon">
+                            <img
+                            src="assets/images/icons/roadmap-icon7.svg"
+                            alt="Icon"
+                            class="animate__swing"
+                          />
+                          </div>
+                          <h5 class="fw-semibold tw-mb-5 text-main-two-600">AML/CFT Due Diligence</h5>
+                          <p class="text-neutral-600">
+                              Comprehensive AML/CFT due diligence procedures in line with EU regulations and international standards.
+                          </p>
+                      </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1000">
+                      <div class="compliance-item">
+                          <div class="compliance-icon">
+                              <i class="ph ph-globe"></i>
+                          </div>
+                          <h5 class="fw-semibold tw-mb-5 text-main-two-600">Legal Support</h5>
+                          <p class="text-neutral-600">
+                              Professional legal support for cross-border transactions with experienced advisors and financial professionals.
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </section>
+
+        <!-- ================================== Show-case section start ========================== -->
+        <section class="show-case py-120 bg-main-two-600 overflow-hidden">
+          <div class="max-w-602-px mx-auto text-center tw-mb-15">
+            <span
+              class="tw-py-1 tw-px-705 bg-white-13 text-white tw-text-sm fw-medium text-capitalize rounded-pill tw-mb-205"
+            >
+              Work Showcase
+            </span>
+            <h3 class="fw-light tw-leading-104 tw-mb-9 text-white">
+              <span class="splitTextStyleOne d-inline-block fw-medium">
+                <span class="fw-semibold">Comprehensive IT Solution </span>
+                <span class=""> Growth</span>
+                <span class="fw-semibold">& Efficiency</span>
+              </span>
+            </h3>
+          </div>
+
+          <div class="show-case-slider swiper">
+            <div class="swiper-wrapper">
+              <!-- Slide 1 -->
+              <div
+                class="swiper-slide"
+              >
+                <div class="group-item">
+                  <div class="position-relative">
+                    <a
+                      href="#"
+                      class="w-100 h-100 overflow-hidden tw-rounded-28-px"
+                    >
+                      <img
+                        src="assets/images/swiper/1.png"
+                        alt="Image"
+                        class="w-100 h-auto object-fit-cover group-hover-item-scale-12 tw-duration-300"
+                        loading="lazy"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div
+                class="swiper-slide"
+              >
+                <div class="group-item">
+                  <div class="position-relative">
+                    <a
+                      href="#"
+                      class="w-100 h-100 overflow-hidden tw-rounded-28-px"
+                    >
+                      <img
+                        src="assets/images/swiper/2.png"
+                        alt="Image"
+                        class="w-100 h-auto object-fit-cover group-hover-item-scale-12 tw-duration-300"
+                        loading="lazy"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 3 -->
+              <div
+                class="swiper-slide"
+              >
+                <div class="group-item">
+                  <div class="position-relative">
+                    <a
+                      href="#"
+                      class="w-100 h-100 overflow-hidden tw-rounded-28-px"
+                    >
+                      <img
+                        src="assets/images/swiper/3.png"
+                        alt="Image"
+                        class="w-100 h-auto object-fit-cover group-hover-item-scale-12 tw-duration-300"
+                        loading="lazy"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 4 -->
+              <div
+                class="swiper-slide"
+              >
+                <div class="group-item">
+                  <div class="position-relative">
+                    <a
+                      href="#"
+                      class="w-100 h-100 overflow-hidden tw-rounded-28-px"
+                    >
+                      <img
+                        src="assets/images/swiper/4.png"
+                        alt="Image"
+                        class="w-100 h-auto object-fit-cover group-hover-item-scale-12 tw-duration-300"
+                        loading="lazy"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 5 -->
+              <div
+                class="swiper-slide"
+              >
+                <div class="group-item">
+                  <div class="position-relative">
+                    <a
+                      href="#"
+                      class="w-100 h-100 overflow-hidden tw-rounded-28-px"
+                    >
+                      <img
+                        src="assets/images/swiper/5.png"
+                        alt="Image"
+                        class="w-100 h-auto object-fit-cover group-hover-item-scale-12 tw-duration-300"
+                        loading="lazy"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 6 -->
+              <div
+                class="swiper-slide"
+              >
+                <div class="group-item">
+                  <div class="position-relative">
+                    <a
+                      href="#"
+                      class="w-100 h-100 overflow-hidden tw-rounded-28-px"
+                    >
+                      <img
+                        src="assets/images/swiper/6.png"
+                        alt="Image"
+                        class="w-100 h-auto object-fit-cover group-hover-item-scale-12 tw-duration-300"
+                        loading="lazy"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 7 -->
+              <div
+                class="swiper-slide"
+              >
+                <div class="group-item">
+                  <div class="position-relative">
+                    <a
+                      href="#"
+                      class="w-100 h-100 overflow-hidden tw-rounded-28-px"
+                    >
+                      <img
+                        src="assets/images/swiper/7.png"
+                        alt="Image"
+                        class="w-100 h-auto object-fit-cover group-hover-item-scale-12 tw-duration-300"
+                        loading="lazy"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 8 -->
+              <div
+                class="swiper-slide"
+              >
+                <div class="group-item">
+                  <div class="position-relative">
+                    <a
+                      href="#"
+                      class="w-100 h-100 overflow-hidden tw-rounded-28-px"
+                    >
+                      <img
+                        src="assets/images/swiper/8.png"
+                        alt="Image"
+                        class="w-100 h-auto object-fit-cover group-hover-item-scale-12 tw-duration-300"
+                        loading="lazy"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 9 -->
+              <div
+                class="swiper-slide"
+              >
+                <div class="group-item">
+                  <div class="position-relative">
+                    <a
+                      href="#"
+                      class="w-100 h-100 overflow-hidden tw-rounded-28-px"
+                    >
+                      <img
+                        src="assets/images/swiper/9.png"
+                        alt="Image"
+                        class="w-100 h-auto object-fit-cover group-hover-item-scale-12 tw-duration-300"
+                        loading="lazy"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ================================== Show-case section End ========================== -->
+
+        <!-- Footer Start -->
+        <footer class="footer">
+          <div class="container">
+              <div class="row">
+                  <!-- Company Info with Hexagon Logo -->
+                  <div class="col-lg-6 col-md-6 mb-4">
+                      <div class="footer-company-info">
+                          <!-- Hexagon Logo -->
+                          <div class="hexagon-container">
+                            <img
+                            src="assets/images/img/logo.png"
+                            alt="Logo"
+                            class="max-w-200-px"
+                            style="height: 80px; background-color: #eee;"
+                          />
+                          </div>
+                          
+                          <h5>Advensys International Trading SIA</h5>
+                          <p class="footer-description">
+                              International trading company providing commodity brokerage, financial intermediation, and compliance services backed by the expertise of Groupe Advensys Luxembourg SA.
+                          </p>
+                          
+                          <!-- Contact Info -->
+                          <div class="contact-info">
+                              <div class="contact-item">
+                                  <svg class="contact-icon" fill="currentColor" viewBox="0 0 20 20">
+                                      <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                                  </svg>
+                                  <span style="color: white;">+371 206 828 42</span>
+                              </div>
+                              
+                              <div class="contact-item">
+                                  <svg class="contact-icon" fill="currentColor" viewBox="0 0 20 20">
+                                      <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                      <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                                  </svg>
+                                  <span style="color: white;">contact@advensys-trading.lv</span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <!-- Services Column -->
+                  <div class="col-lg-2 col-md-6 mb-4">
+                      <div class="footer-section">
+                          <h6>Services</h6>
+                            <ul class="footer-links">
+  <li><a href="aviation.html" class="text-white">Aircraft Spare Parts</a></li>
+  <li><a href="aviation.html" class="text-white">Pre-Owned Aircraft</a></li>
+  <li><a href="commodities.html" class="text-white">Commodities Brokerage</a></li>
+  <li><a href="commodities.html" class="text-white">Financial Intermediation</a></li>
+</ul>
+                      </div>
+                  </div>
+
+                  <!-- About Column -->
+                  <div class="col-lg-2 col-md-6 mb-4">
+                      <div class="footer-section">
+                          <h6>About</h6>
+                          <ul class="footer-links">
+                              <li><a href="about.html">About Us</a></li>
+                              <li><a href="about.html#groupe">Groupe Advensys</a></li>
+                              <li><a href="about.html#leadership">Leadership</a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <!-- Contact Column -->
+                  <div class="col-lg-2 col-md-6 mb-4">
+                      <div class="footer-section">
+                          <h6>Support</h6>
+                          <ul class="footer-links">
+                                                            <li><a href="contact.html">Get in Touch</a></li>
+                              <li><a href="contact.html">Free Consultation</a></li>
+                              <li><a href="contact.html">Partnership Inquiries</a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Footer Bottom -->
+              <div class="footer-bottom">
+                  <div class="row align-items-center">
+                      <div class="col-md-8">
+                          <p class="copyright-text">
+                              © 2025 Advensys International Trading SIA – A subsidiary of Groupe Advensys Luxembourg SA<br>
+                              <small>Registered in Latvia – Reg. No. 40203531724</small>
+                          </p>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/company/advensys-international-trading/" class="social-link" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                                </svg>
+                            </a>
+                            <a href="mailto:contact@advensys-trading.lv" class="social-link" title="Email">
+                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                                </svg>
+                            </a>
+                            <a href="tel:+371 206 828 42" class="social-link" title="Phone">
+                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122L9.98 10.8a.678.678 0 0 1-.725-.247 7.968 7.968 0 0 1-2.46-2.46.678.678 0 0 1-.247-.725l.4-1.805a.678.678 0 0 0-.122-.58L3.654 1.328z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Legal Links -->
+                  <div class="row mt-3">
+                      <div class="col-12">
+                          <div class="legal-links">
+                              <a href="#privacy">Privacy Policy</a>
+                              <span style="color: var(--neutral-400);">|</span>
+                              <a href="#cookies">Cookies</a>
+                              <span style="color: var(--neutral-400);">|</span>
+                              <a href="#impressum">Impressum (coming soon)</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </footer>
+        <!-- Footer End -->
+      </div>
+    </div>
+
+    <!-- VIDEO MODAL - Moved to correct position -->
+    <div class="modal fade video-modal"   id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <div class="modal-body">
+            <iframe 
+              id="videoIframe"
+              src=""
+              title="ADVENSYS - #BUSINESS INSIDE FORBES"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap 5.3.3 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Jquery js -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <!-- phosphor Js -->
+    <script src="assets/js/phosphor-icon.js"></script>
+
+    <!-- GSAP js -->
+    <script src="assets/js/gsap.min.js"></script>
+    <!-- Scroll Trigger -->
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <!-- ScrollSmoother -->
+    <script src="assets/js/ScrollSmoother.min.js"></script>
+    <!-- SplitText -->
+    <script src="assets/js/SplitText.min.js"></script>
+    <!-- custom GSAP -->
+    <script src="assets/js/custom-gsap.js"></script>
+
+    <!-- aos Js -->
+    <script src="assets/js/aos.js"></script>
+    <!-- counter up Js -->
+    <script src="assets/js/counterup.min.js"></script>
+    <!-- swiper Js -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- Marquee js -->
+    <script src="assets/js/jquery.marquee.min.js"></script>
+    <!-- magnific js -->
+    <script src="assets/js/magnific-popup.min.js"></script>
+
+    <!-- main js -->
+    <script src="assets/js/main.js"></script>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Video Modal Functionality
+    const videoModal = document.getElementById("videoModal");
+    const videoIframe = document.getElementById("videoIframe");
+    const openVideoBtn = document.getElementById("openVideoModal");
+    const videoSrc =
+      "https://player.vimeo.com/video/834470094?dnt=1&app_id=122963&width=1170&height=658&autoplay=1";
+
+    if (openVideoBtn && videoModal && videoIframe) {
+      openVideoBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        const modal = new bootstrap.Modal(videoModal);
+        videoIframe.src = videoSrc;
+        modal.show();
+      });
+    }
+
+    if (videoModal && videoIframe) {
+      videoModal.addEventListener("hide.bs.modal", function () {
+        videoIframe.src = "";
+      });
+    }
+
+    const openMobileMenuBtn = document.getElementById("openMobileMenu");
+    const closeMobileMenuBtn = document.getElementById("closeMobileMenu");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const mobileOverlay = document.getElementById("mobileOverlay");
+    const body = document.body;
+
+    let isMobileMenuOpen = false;
+    let isNavigatingViaLink = false;
+
+    function openMobileMenu() {
+      if (isMobileMenuOpen) return;
+
+      isMobileMenuOpen = true;
+      mobileMenu.classList.add("active");
+      mobileOverlay.classList.add("active");
+      body.classList.add("mobile-menu-open");
+
+      body.style.overflow = "hidden";
+      body.style.position = "fixed";
+      body.style.width = "100%";
+
+      closeMobileMenuBtn.focus();
+    }
+
+    function closeMobileMenu() {
+      if (!isMobileMenuOpen) return;
+
+      isMobileMenuOpen = false;
+
+      mobileMenu.classList.remove("active");
+      mobileOverlay.classList.remove("active");
+      body.classList.remove("mobile-menu-open");
+
+      body.style.overflow = "";
+      body.style.position = "";
+      body.style.width = "";
+
+      openMobileMenuBtn.focus();
+
+    }
+
+    if (openMobileMenuBtn) {
+      openMobileMenuBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        openMobileMenu();
+      });
+    }
+
+    if (closeMobileMenuBtn) {
+      closeMobileMenuBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        closeMobileMenu();
+      });
+    }
+
+    if (mobileOverlay) {
+      mobileOverlay.addEventListener("click", function (e) {
+        e.preventDefault();
+        closeMobileMenu();
+      });
+    }
+
+    const mobileMenuLinks = document.querySelectorAll("#mobileMenu .nav-menu a");
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetUrl = this.getAttribute("href");
+
+        // Mark that we are navigating
+        isNavigatingViaLink = true;
+
+        // Close menu with delay
+        setTimeout(() => {
+          closeMobileMenu();
+
+          // Navigate after UI transition
+          setTimeout(() => {
+            window.location.href = targetUrl;
+          }, 150);
+        }, 50);
+      });
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && isMobileMenuOpen) {
+        closeMobileMenu();
+      }
+    });
+
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 992 && isMobileMenuOpen) {
+        closeMobileMenu();
+      }
+    });
+
+    window.addEventListener("load", function () {
+      const preloader = document.querySelector(".preloader");
+      if (preloader) {
+        preloader.style.opacity = "0";
+        setTimeout(() => {
+          preloader.style.display = "none";
+        }, 300);
+      }
+    });
+
+    window.addEventListener("pageshow", function () {
+      if (isMobileMenuOpen) {
+        closeMobileMenu();
+      }
+    });
+  });
+</script>
+
+  </body>
+</html>

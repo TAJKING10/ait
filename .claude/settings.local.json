@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(python -m http.server 8080)"
+      "Bash(python -m http.server 8080)",
+      "Bash(powershell -Command \"Compress-Archive -Path index.html, about.html, aviation.html, commodities.html, contact.html, services.html, assets -DestinationPath deploy_site.zip -Force\")",
+      "Bash(powershell -Command \"\\(Get-Item 'C:/Users/Toufi/AndroidStudioProjects/aittajjj/deploy_site.zip'\\).Length / 1MB\")"
     ]
   }
 }
